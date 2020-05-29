@@ -16,5 +16,11 @@ namespace CarRentalSystem
         {
             InitializeComponent();
         }
+
+        private void adminSignUpButton_Click(object sender, EventArgs e)
+        {
+            //让新管理员填写所需要的信息
+            //查询数据库管理员数量，如果没有管理员则直接注册，有管理员则要审核。
+        }
     }
 }
