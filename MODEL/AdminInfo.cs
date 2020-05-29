@@ -23,8 +23,12 @@ namespace MODEL
         private string adminPwd;
         // 管理员控制密码
         private string adminControlPwd;
+        // 管理员真实姓名
+        private string adminRealName;
         // 管理员电话
         private string adminPhone;
+        // 管理员住址
+        private string adminAddress;
         // 管理员身份证
         private string adminIdentity;
         // 性别
@@ -43,5 +47,7 @@ namespace MODEL
         public byte[] AdminPhoto { get => adminPhoto; set => adminPhoto = value; }
         public bool IsDelete { get => isDelete; set => isDelete = value; }
         public GenderEnum Gender { get => gender; set => gender = value; }
+        public string AdminRealName { get => adminRealName; set => adminRealName = value; }
+        public string AdminAddress { get => adminAddress; set => adminAddress = value; }
     }
 }

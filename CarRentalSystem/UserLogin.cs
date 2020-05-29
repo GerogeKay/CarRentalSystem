@@ -20,7 +20,17 @@ namespace CarRentalSystem
         private void adminSignUpButton_Click(object sender, EventArgs e)
         {
             //让新管理员填写所需要的信息
+            SignInWindow signInWindow = new SignInWindow();
+            signInWindow.adminSignInPage.Select();
+            signInWindow.Show();
             //查询数据库管理员数量，如果没有管理员则直接注册，有管理员则要审核。
+        }
+
+        private void userSignUpButton_Click(object sender, EventArgs e)
+        {
+            SignInWindow signInWindow = new SignInWindow();
+            signInWindow.userSignInPage.Select();
+            signInWindow.Show();
         }
     }
 }

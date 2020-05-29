@@ -23,6 +23,8 @@ namespace MODEL
         private string userPwd;
         // 用户支付密码
         private string userPayPwd;
+        // 用户真实姓名
+        private string userRealName;
         // 用户电话
         private string userPhone;
         // 用户身份证
@@ -55,5 +57,6 @@ namespace MODEL
         public decimal RemainMoney { get => remainMoney; set => remainMoney = value; }
         public string UserAddress { get => userAddress; set => userAddress = value; }
         public int UserLevel { get => userLevel; set => userLevel = value; }
+        public string UserRealName { get => userRealName; set => userRealName = value; }
     }
 }
