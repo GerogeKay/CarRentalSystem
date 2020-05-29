@@ -247,6 +247,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LoginPages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "UserLogin";
             this.Text = "用户登录";
             this.LoginPages.ResumeLayout(false);

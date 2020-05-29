@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.signInTypeControl = new System.Windows.Forms.TabControl();
             this.userSignInPage = new System.Windows.Forms.TabPage();
             this.adminSignInPage = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,21 +77,21 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textAdminName = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.signInTypeControl.SuspendLayout();
             this.userSignInPage.SuspendLayout();
             this.adminSignInPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // signInTypeControl
             // 
-            this.tabControl1.Controls.Add(this.userSignInPage);
-            this.tabControl1.Controls.Add(this.adminSignInPage);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(526, 450);
-            this.tabControl1.TabIndex = 0;
+            this.signInTypeControl.Controls.Add(this.userSignInPage);
+            this.signInTypeControl.Controls.Add(this.adminSignInPage);
+            this.signInTypeControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.signInTypeControl.Location = new System.Drawing.Point(0, 0);
+            this.signInTypeControl.Name = "signInTypeControl";
+            this.signInTypeControl.SelectedIndex = 0;
+            this.signInTypeControl.Size = new System.Drawing.Size(526, 450);
+            this.signInTypeControl.TabIndex = 0;
             // 
             // userSignInPage
             // 
@@ -569,10 +569,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 450);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.signInTypeControl);
             this.Name = "SignInWindow";
             this.Text = "注册";
-            this.tabControl1.ResumeLayout(false);
+            this.signInTypeControl.ResumeLayout(false);
             this.userSignInPage.ResumeLayout(false);
             this.userSignInPage.PerformLayout();
             this.adminSignInPage.ResumeLayout(false);
@@ -628,7 +628,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textAdminName;
         private System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabControl signInTypeControl;
         public System.Windows.Forms.TabPage userSignInPage;
         public System.Windows.Forms.TabPage adminSignInPage;
     }
