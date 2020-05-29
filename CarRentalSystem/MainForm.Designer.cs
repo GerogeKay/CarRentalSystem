@@ -61,16 +61,18 @@
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.InfoListPanel = new System.Windows.Forms.Panel();
             this.InfoListView = new System.Windows.Forms.ListView();
-            this.colUserId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colBorrowKind = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colStartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colBorrowNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCarId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colShop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DevicePictureBox = new System.Windows.Forms.PictureBox();
             this.UserPicture = new System.Windows.Forms.PictureBox();
+            this.colShopAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colUserID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             UserIDLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -231,13 +233,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.99683F));
             this.tableLayoutPanel1.Controls.Add(this.DevicePanel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.UserInfoPanel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.InfoListPanel, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.04293F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.95707F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1264, 629);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1264, 232);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // DevicePanel
@@ -255,7 +256,7 @@
             this.DevicePanel.Controls.Add(this.rentCarButton);
             this.DevicePanel.Location = new System.Drawing.Point(3, 3);
             this.DevicePanel.Name = "DevicePanel";
-            this.DevicePanel.Size = new System.Drawing.Size(803, 227);
+            this.DevicePanel.Size = new System.Drawing.Size(803, 226);
             this.DevicePanel.TabIndex = 0;
             this.DevicePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -342,7 +343,7 @@
             this.UserInfoPanel.Font = new System.Drawing.Font("宋体", 12F);
             this.UserInfoPanel.Location = new System.Drawing.Point(812, 3);
             this.UserInfoPanel.Name = "UserInfoPanel";
-            this.UserInfoPanel.Size = new System.Drawing.Size(449, 227);
+            this.UserInfoPanel.Size = new System.Drawing.Size(449, 226);
             this.UserInfoPanel.TabIndex = 1;
             // 
             // Moneylabel
@@ -384,12 +385,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoListPanel.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.InfoListPanel, 2);
             this.InfoListPanel.Controls.Add(this.InfoListView);
-            this.InfoListPanel.Location = new System.Drawing.Point(3, 236);
+            this.InfoListPanel.Location = new System.Drawing.Point(3, 278);
             this.InfoListPanel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.InfoListPanel.Name = "InfoListPanel";
-            this.InfoListPanel.Size = new System.Drawing.Size(1258, 393);
+            this.InfoListPanel.Size = new System.Drawing.Size(1258, 394);
             this.InfoListPanel.TabIndex = 2;
             // 
             // InfoListView
@@ -399,70 +399,79 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InfoListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colUserId,
+            this.colHeader,
+            this.colUserID,
             this.colUserName,
             this.colBorrowKind,
             this.colStartTime,
             this.colBorrowNum,
             this.colPhone,
             this.colCarId,
-            this.colAddress});
+            this.colShop,
+            this.colShopAddress});
             this.InfoListView.Font = new System.Drawing.Font("宋体", 12F);
             this.InfoListView.GridLines = true;
             this.InfoListView.HideSelection = false;
             this.InfoListView.Location = new System.Drawing.Point(0, 0);
             this.InfoListView.Name = "InfoListView";
-            this.InfoListView.Size = new System.Drawing.Size(1258, 393);
+            this.InfoListView.Size = new System.Drawing.Size(1258, 391);
             this.InfoListView.TabIndex = 1;
             this.InfoListView.UseCompatibleStateImageBehavior = false;
             this.InfoListView.View = System.Windows.Forms.View.Details;
             // 
-            // colUserId
+            // colHeader
             // 
-            this.colUserId.Text = "用户ID";
-            this.colUserId.Width = 100;
+            this.colHeader.Text = "";
+            this.colHeader.Width = 0;
             // 
             // colUserName
             // 
+            this.colUserName.DisplayIndex = 2;
             this.colUserName.Text = "用户名";
             this.colUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colUserName.Width = 100;
             // 
             // colBorrowKind
             // 
+            this.colBorrowKind.DisplayIndex = 3;
             this.colBorrowKind.Text = "租借类型";
             this.colBorrowKind.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBorrowKind.Width = 100;
             // 
             // colStartTime
             // 
+            this.colStartTime.DisplayIndex = 4;
             this.colStartTime.Text = "时间";
             this.colStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colStartTime.Width = 100;
             // 
             // colBorrowNum
             // 
+            this.colBorrowNum.DisplayIndex = 5;
             this.colBorrowNum.Text = "租借数量";
             this.colBorrowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBorrowNum.Width = 80;
             // 
             // colPhone
             // 
+            this.colPhone.DisplayIndex = 6;
             this.colPhone.Text = "电话号码";
             this.colPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colPhone.Width = 120;
             // 
             // colCarId
             // 
+            this.colCarId.DisplayIndex = 7;
             this.colCarId.Text = "车辆ID";
             this.colCarId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colCarId.Width = 100;
             // 
-            // colAddress
+            // colShop
             // 
-            this.colAddress.Text = "地址";
-            this.colAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colAddress.Width = 200;
+            this.colShop.DisplayIndex = 8;
+            this.colShop.Text = "店铺";
+            this.colShop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colShop.Width = 200;
             // 
             // DevicePictureBox
             // 
@@ -488,6 +497,19 @@
             this.UserPicture.TabIndex = 1;
             this.UserPicture.TabStop = false;
             // 
+            // colShopAddress
+            // 
+            this.colShopAddress.DisplayIndex = 9;
+            this.colShopAddress.Text = "店铺地址";
+            this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colShopAddress.Width = 250;
+            // 
+            // colUserID
+            // 
+            this.colUserID.Text = "用户ID";
+            this.colUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colUserID.Width = 100;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -495,13 +517,13 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.InfoListPanel);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "车辆租赁管理系统";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.DevicePanel.ResumeLayout(false);
             this.DevicePanel.PerformLayout();
             this.UserInfoPanel.ResumeLayout(false);
@@ -510,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -540,13 +563,13 @@
         private System.Windows.Forms.Label Moneylabel;
         private System.Windows.Forms.Panel InfoListPanel;
         private System.Windows.Forms.ListView InfoListView;
-        private System.Windows.Forms.ColumnHeader colUserId;
+        private System.Windows.Forms.ColumnHeader colHeader;
         private System.Windows.Forms.ColumnHeader colUserName;
         private System.Windows.Forms.ColumnHeader colBorrowKind;
         private System.Windows.Forms.ColumnHeader colStartTime;
         private System.Windows.Forms.ColumnHeader colBorrowNum;
         private System.Windows.Forms.ColumnHeader colPhone;
-        private System.Windows.Forms.ColumnHeader colAddress;
+        private System.Windows.Forms.ColumnHeader colShop;
         private System.Windows.Forms.ColumnHeader colCarId;
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.PictureBox DevicePictureBox;
@@ -556,6 +579,8 @@
         private System.Windows.Forms.Button LostCarButton;
         private System.Windows.Forms.Button returnCarButton;
         private System.Windows.Forms.Button rentCarButton;
+        private System.Windows.Forms.ColumnHeader colShopAddress;
+        private System.Windows.Forms.ColumnHeader colUserID;
     }
 }
 

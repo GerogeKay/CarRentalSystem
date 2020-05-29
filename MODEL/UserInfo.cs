@@ -35,6 +35,8 @@ namespace MODEL
         private GenderEnum gender;
         // 用户头像
         private byte[] userPhoto;
+        // 用户级别
+        private int userLevel;
         // 用户余额
         private decimal remainMoney;
         // 是否已被删除
@@ -52,5 +54,6 @@ namespace MODEL
         public string UserDriLicense { get => userDriLicense; set => userDriLicense = value; }
         public decimal RemainMoney { get => remainMoney; set => remainMoney = value; }
         public string UserAddress { get => userAddress; set => userAddress = value; }
+        public int UserLevel { get => userLevel; set => userLevel = value; }
     }
 }
