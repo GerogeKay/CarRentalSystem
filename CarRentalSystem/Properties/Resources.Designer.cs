@@ -63,6 +63,16 @@ namespace CarRentalSystem.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 扁平化小车 {
+            get {
+                object obj = ResourceManager.GetObject("扁平化小车", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 蓝底空白头像 {
             get {
                 object obj = ResourceManager.GetObject("蓝底空白头像", resourceCulture);
