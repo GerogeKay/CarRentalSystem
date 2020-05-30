@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textUserPwd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textCheckUserPwd = new System.Windows.Forms.TextBox();
+            this.textUserCheckPwd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textPayPwd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textAdminPhone = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textCheckContorlPwd = new System.Windows.Forms.TextBox();
+            this.textControlCheckPwd = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.textControlPwd = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             this.userSignInPage.Controls.Add(this.label5);
             this.userSignInPage.Controls.Add(this.textPayPwd);
             this.userSignInPage.Controls.Add(this.label4);
-            this.userSignInPage.Controls.Add(this.textCheckUserPwd);
+            this.userSignInPage.Controls.Add(this.textUserCheckPwd);
             this.userSignInPage.Controls.Add(this.label3);
             this.userSignInPage.Controls.Add(this.textUserPwd);
             this.userSignInPage.Controls.Add(this.label2);
@@ -142,7 +142,7 @@
             this.adminSignInPage.Controls.Add(this.label16);
             this.adminSignInPage.Controls.Add(this.textAdminPhone);
             this.adminSignInPage.Controls.Add(this.label17);
-            this.adminSignInPage.Controls.Add(this.textCheckContorlPwd);
+            this.adminSignInPage.Controls.Add(this.textControlCheckPwd);
             this.adminSignInPage.Controls.Add(this.label18);
             this.adminSignInPage.Controls.Add(this.textControlPwd);
             this.adminSignInPage.Controls.Add(this.label19);
@@ -190,6 +190,7 @@
             // 
             this.textUserPwd.Location = new System.Drawing.Point(208, 64);
             this.textUserPwd.Name = "textUserPwd";
+            this.textUserPwd.PasswordChar = '●';
             this.textUserPwd.Size = new System.Drawing.Size(199, 21);
             this.textUserPwd.TabIndex = 1;
             // 
@@ -203,12 +204,13 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "确认登陆密码:";
             // 
-            // textCheckUserPwd
+            // textUserCheckPwd
             // 
-            this.textCheckUserPwd.Location = new System.Drawing.Point(208, 91);
-            this.textCheckUserPwd.Name = "textCheckUserPwd";
-            this.textCheckUserPwd.Size = new System.Drawing.Size(199, 21);
-            this.textCheckUserPwd.TabIndex = 1;
+            this.textUserCheckPwd.Location = new System.Drawing.Point(208, 91);
+            this.textUserCheckPwd.Name = "textUserCheckPwd";
+            this.textUserCheckPwd.PasswordChar = '●';
+            this.textUserCheckPwd.Size = new System.Drawing.Size(199, 21);
+            this.textUserCheckPwd.TabIndex = 1;
             // 
             // label4
             // 
@@ -224,6 +226,7 @@
             // 
             this.textPayPwd.Location = new System.Drawing.Point(208, 118);
             this.textPayPwd.Name = "textPayPwd";
+            this.textPayPwd.PasswordChar = '●';
             this.textPayPwd.Size = new System.Drawing.Size(199, 21);
             this.textPayPwd.TabIndex = 1;
             // 
@@ -241,6 +244,7 @@
             // 
             this.textCheckPayPwd.Location = new System.Drawing.Point(208, 145);
             this.textCheckPayPwd.Name = "textCheckPayPwd";
+            this.textCheckPayPwd.PasswordChar = '●';
             this.textCheckPayPwd.Size = new System.Drawing.Size(199, 21);
             this.textCheckPayPwd.TabIndex = 1;
             // 
@@ -347,6 +351,7 @@
             this.buttonUserConfirm.TabIndex = 2;
             this.buttonUserConfirm.Text = "确 定";
             this.buttonUserConfirm.UseVisualStyleBackColor = true;
+            this.buttonUserConfirm.Click += new System.EventHandler(this.buttonUserConfirm_Click);
             // 
             // buttonUserCancel
             // 
@@ -356,6 +361,7 @@
             this.buttonUserCancel.TabIndex = 3;
             this.buttonUserCancel.Text = "取 消";
             this.buttonUserCancel.UseVisualStyleBackColor = true;
+            this.buttonUserCancel.Click += new System.EventHandler(this.buttonUserCancel_Click);
             // 
             // userGenderBox
             // 
@@ -369,6 +375,7 @@
             this.userGenderBox.Name = "userGenderBox";
             this.userGenderBox.Size = new System.Drawing.Size(199, 20);
             this.userGenderBox.TabIndex = 4;
+            this.userGenderBox.Text = "男";
             // 
             // adminGenderBox
             // 
@@ -382,6 +389,7 @@
             this.adminGenderBox.Name = "adminGenderBox";
             this.adminGenderBox.Size = new System.Drawing.Size(199, 20);
             this.adminGenderBox.TabIndex = 28;
+            this.adminGenderBox.Text = "男";
             // 
             // buttonAdminCancel
             // 
@@ -391,6 +399,7 @@
             this.buttonAdminCancel.TabIndex = 27;
             this.buttonAdminCancel.Text = "取 消";
             this.buttonAdminCancel.UseVisualStyleBackColor = true;
+            this.buttonAdminCancel.Click += new System.EventHandler(this.buttonAdminCancel_Click);
             // 
             // buttonAdminConfirm
             // 
@@ -400,6 +409,7 @@
             this.buttonAdminConfirm.TabIndex = 26;
             this.buttonAdminConfirm.Text = "确 定";
             this.buttonAdminConfirm.UseVisualStyleBackColor = true;
+            this.buttonAdminConfirm.Click += new System.EventHandler(this.buttonAdminConfirm_Click);
             // 
             // label12
             // 
@@ -479,12 +489,13 @@
             this.label17.TabIndex = 10;
             this.label17.Text = "电话号码:";
             // 
-            // textCheckContorlPwd
+            // textControlCheckPwd
             // 
-            this.textCheckContorlPwd.Location = new System.Drawing.Point(208, 171);
-            this.textCheckContorlPwd.Name = "textCheckContorlPwd";
-            this.textCheckContorlPwd.Size = new System.Drawing.Size(199, 21);
-            this.textCheckContorlPwd.TabIndex = 21;
+            this.textControlCheckPwd.Location = new System.Drawing.Point(208, 171);
+            this.textControlCheckPwd.Name = "textControlCheckPwd";
+            this.textControlCheckPwd.PasswordChar = '●';
+            this.textControlCheckPwd.Size = new System.Drawing.Size(199, 21);
+            this.textControlCheckPwd.TabIndex = 21;
             // 
             // label18
             // 
@@ -500,6 +511,7 @@
             // 
             this.textControlPwd.Location = new System.Drawing.Point(208, 144);
             this.textControlPwd.Name = "textControlPwd";
+            this.textControlPwd.PasswordChar = '●';
             this.textControlPwd.Size = new System.Drawing.Size(199, 21);
             this.textControlPwd.TabIndex = 23;
             // 
@@ -517,6 +529,7 @@
             // 
             this.textAdminCheckPwd.Location = new System.Drawing.Point(208, 117);
             this.textAdminCheckPwd.Name = "textAdminCheckPwd";
+            this.textAdminCheckPwd.PasswordChar = '●';
             this.textAdminCheckPwd.Size = new System.Drawing.Size(199, 21);
             this.textAdminCheckPwd.TabIndex = 24;
             // 
@@ -534,6 +547,7 @@
             // 
             this.textAdminPwd.Location = new System.Drawing.Point(208, 90);
             this.textAdminPwd.Name = "textAdminPwd";
+            this.textAdminPwd.PasswordChar = '●';
             this.textAdminPwd.Size = new System.Drawing.Size(199, 21);
             this.textAdminPwd.TabIndex = 25;
             // 
@@ -601,7 +615,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textPayPwd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textCheckUserPwd;
+        private System.Windows.Forms.TextBox textUserCheckPwd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textUserPwd;
         private System.Windows.Forms.Label label2;
@@ -618,7 +632,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textAdminPhone;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textCheckContorlPwd;
+        private System.Windows.Forms.TextBox textControlCheckPwd;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textControlPwd;
         private System.Windows.Forms.Label label19;

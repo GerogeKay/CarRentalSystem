@@ -104,5 +104,15 @@
   <ItemGroup>
     <None Include="Resources\扁平化小车.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRSCOMMON\CRSCOMMON.csproj">
+      <Project>{57a9930c-c0f3-4c4a-911c-08156c86d2ec}</Project>
+      <Name>CRSCOMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODEL\MODEL.csproj">
+      <Project>{9820fdd0-9350-49bc-b7b3-b94d81ca5d78}</Project>
+      <Name>MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

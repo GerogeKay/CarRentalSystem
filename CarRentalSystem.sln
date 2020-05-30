@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRSCOMMON", "CRSCOMMON\CRSC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL", "MODEL\MODEL.csproj", "{9820FDD0-9350-49BC-B7B3-B94D81CA5D78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRSDal", "CRSBLL\CRSDal.csproj", "{54B92D7B-5295-44DA-B667-C8ADF1A37280}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9820FDD0-9350-49BC-B7B3-B94D81CA5D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9820FDD0-9350-49BC-B7B3-B94D81CA5D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9820FDD0-9350-49BC-B7B3-B94D81CA5D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B92D7B-5295-44DA-B667-C8ADF1A37280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B92D7B-5295-44DA-B667-C8ADF1A37280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B92D7B-5295-44DA-B667-C8ADF1A37280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B92D7B-5295-44DA-B667-C8ADF1A37280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

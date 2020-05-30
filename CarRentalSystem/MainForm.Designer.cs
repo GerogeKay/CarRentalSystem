@@ -69,10 +69,10 @@
             this.colPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCarId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
-            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.colShopAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUserID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
+            this.UserPicture = new System.Windows.Forms.PictureBox();
             UserIDLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -364,7 +364,7 @@
             this.UserLevelLabel.Name = "UserLevelLabel";
             this.UserLevelLabel.Size = new System.Drawing.Size(80, 16);
             this.UserLevelLabel.TabIndex = 0;
-            this.UserLevelLabel.Text = "用户等级:";
+            this.UserLevelLabel.Text = "用户类型:";
             this.UserLevelLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // UserNameLabel
@@ -425,52 +425,57 @@
             // 
             // colUserName
             // 
-            this.colUserName.DisplayIndex = 2;
             this.colUserName.Text = "用户名";
             this.colUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colUserName.Width = 100;
             // 
             // colBorrowKind
             // 
-            this.colBorrowKind.DisplayIndex = 3;
             this.colBorrowKind.Text = "租借类型";
             this.colBorrowKind.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBorrowKind.Width = 100;
             // 
             // colStartTime
             // 
-            this.colStartTime.DisplayIndex = 4;
             this.colStartTime.Text = "时间";
             this.colStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colStartTime.Width = 100;
             // 
             // colBorrowNum
             // 
-            this.colBorrowNum.DisplayIndex = 5;
             this.colBorrowNum.Text = "租借数量";
             this.colBorrowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBorrowNum.Width = 80;
             // 
             // colPhone
             // 
-            this.colPhone.DisplayIndex = 6;
             this.colPhone.Text = "电话号码";
             this.colPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colPhone.Width = 120;
             // 
             // colCarId
             // 
-            this.colCarId.DisplayIndex = 7;
             this.colCarId.Text = "车辆ID";
             this.colCarId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colCarId.Width = 100;
             // 
             // colShop
             // 
-            this.colShop.DisplayIndex = 8;
             this.colShop.Text = "店铺";
             this.colShop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colShop.Width = 200;
+            // 
+            // colShopAddress
+            // 
+            this.colShopAddress.Text = "店铺地址";
+            this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colShopAddress.Width = 250;
+            // 
+            // colUserID
+            // 
+            this.colUserID.Text = "用户ID";
+            this.colUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colUserID.Width = 100;
             // 
             // DevicePictureBox
             // 
@@ -495,19 +500,6 @@
             this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UserPicture.TabIndex = 1;
             this.UserPicture.TabStop = false;
-            // 
-            // colShopAddress
-            // 
-            this.colShopAddress.DisplayIndex = 9;
-            this.colShopAddress.Text = "店铺地址";
-            this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colShopAddress.Width = 250;
-            // 
-            // colUserID
-            // 
-            this.colUserID.Text = "用户ID";
-            this.colUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colUserID.Width = 100;
             // 
             // MainForm
             // 

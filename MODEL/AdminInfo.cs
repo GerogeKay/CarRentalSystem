@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MODEL
 {
-    class AdminInfo
+    public class AdminInfo
     {
         public enum GenderEnum
         {
-            Privacy,
-            Male,
-            Female,
-            Trans,
+            保密,
+            男,
+            女,
+            跨性别,
         }
         // 管理员ID
         private int adminId;

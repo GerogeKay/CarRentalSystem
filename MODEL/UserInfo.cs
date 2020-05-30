@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace MODEL
 {
-    class UserInfo
+    public class UserInfo
     {
         public enum GenderEnum
         {
-            Privacy,
-            Male,
-            Female,
-            Trans,
+            保密,
+            男,
+            女,
+            跨性别,
         }
         // 用户ID
         private int userId;
+        // 用户级别
+        private int userLevel;
         // 用户名称
         private string userName;
         // 用户密码
@@ -27,18 +29,16 @@ namespace MODEL
         private string userRealName;
         // 用户电话
         private string userPhone;
+        // 性别
+        private GenderEnum gender;
         // 用户身份证
         private string userIdentity;
         // 用户地址
         private string userAddress;
         // 用户驾照
         private string userDriLicense;
-        // 性别
-        private GenderEnum gender;
         // 用户头像
         private byte[] userPhoto;
-        // 用户级别
-        private int userLevel;
         // 用户余额
         private decimal remainMoney;
         // 是否已被删除

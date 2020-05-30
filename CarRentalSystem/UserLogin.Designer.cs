@@ -224,9 +224,9 @@
             this.label2.Font = new System.Drawing.Font("宋体", 12F);
             this.label2.Location = new System.Drawing.Point(348, 426);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 13;
-            this.label2.Text = "©软件工程6组";
+            this.label2.Text = "© 软件工程6组";
             // 
             // label3
             // 
