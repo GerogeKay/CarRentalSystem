@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace BIKECOMMON
+namespace CRSCOMMON
 {
     /// <summary>
     /// The SqlHelper class is intended to encapsulate high performance, 

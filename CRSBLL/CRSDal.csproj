@@ -44,5 +44,11 @@
     <Compile Include="AdminDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRSCOMMON\CRSCOMMON.csproj">
+      <Project>{57a9930c-c0f3-4c4a-911c-08156c86d2ec}</Project>
+      <Name>CRSCOMMON</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
