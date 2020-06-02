@@ -16,7 +16,7 @@ namespace CarRentalSystem
     {
         AdminInfo adminInfo;
         UserInfo userInfo;
-        AdminDal adminDal;
+        AdminDal adminDal = new AdminDal();
         LogDal logDal = new LogDal();
         public UserLogin()
         {

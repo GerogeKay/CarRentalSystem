@@ -36,5 +36,11 @@ namespace CarRentalSystem
         {
 
         }
+        #region 窗体加载
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

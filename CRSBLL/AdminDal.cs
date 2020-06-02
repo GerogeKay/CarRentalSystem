@@ -42,7 +42,7 @@ namespace CRSBLL
                     return true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -76,6 +76,7 @@ namespace CRSBLL
                 return -1;
             }
         }
+        #endregion
         #region 管理员登录
         /// <summary>
         /// 管理员登录
@@ -166,7 +167,7 @@ namespace CRSBLL
                 int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para);
                 return result > 0 ? true : false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -210,7 +211,7 @@ namespace CRSBLL
                 int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para);
                 return result > 0 ? true : false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

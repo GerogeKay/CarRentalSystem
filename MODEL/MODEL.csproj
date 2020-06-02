@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AdminInfo.cs" />
     <Compile Include="AuditRequest.cs" />
+    <Compile Include="DeviceInfo.cs" />
     <Compile Include="LogInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo.cs" />

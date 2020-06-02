@@ -42,7 +42,7 @@ namespace CRSBLL
                 int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para);
                 return result > 0 ? true : false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
