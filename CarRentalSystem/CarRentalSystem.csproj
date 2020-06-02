@@ -105,6 +105,10 @@
     <None Include="Resources\扁平化小车.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CRSBLL\CRSDal.csproj">
+      <Project>{54b92d7b-5295-44da-b667-c8adf1a37280}</Project>
+      <Name>CRSDal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CRSCOMMON\CRSCOMMON.csproj">
       <Project>{57a9930c-c0f3-4c4a-911c-08156c86d2ec}</Project>
       <Name>CRSCOMMON</Name>

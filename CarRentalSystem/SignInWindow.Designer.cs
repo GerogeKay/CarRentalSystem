@@ -192,7 +192,7 @@
             this.textUserPwd.Name = "textUserPwd";
             this.textUserPwd.PasswordChar = '●';
             this.textUserPwd.Size = new System.Drawing.Size(199, 21);
-            this.textUserPwd.TabIndex = 1;
+            this.textUserPwd.TabIndex = 2;
             // 
             // label3
             // 
@@ -210,7 +210,7 @@
             this.textUserCheckPwd.Name = "textUserCheckPwd";
             this.textUserCheckPwd.PasswordChar = '●';
             this.textUserCheckPwd.Size = new System.Drawing.Size(199, 21);
-            this.textUserCheckPwd.TabIndex = 1;
+            this.textUserCheckPwd.TabIndex = 3;
             // 
             // label4
             // 
@@ -228,7 +228,7 @@
             this.textPayPwd.Name = "textPayPwd";
             this.textPayPwd.PasswordChar = '●';
             this.textPayPwd.Size = new System.Drawing.Size(199, 21);
-            this.textPayPwd.TabIndex = 1;
+            this.textPayPwd.TabIndex = 4;
             // 
             // label5
             // 
@@ -246,7 +246,7 @@
             this.textCheckPayPwd.Name = "textCheckPayPwd";
             this.textCheckPayPwd.PasswordChar = '●';
             this.textCheckPayPwd.Size = new System.Drawing.Size(199, 21);
-            this.textCheckPayPwd.TabIndex = 1;
+            this.textCheckPayPwd.TabIndex = 5;
             // 
             // label6
             // 
@@ -263,7 +263,7 @@
             this.textUserPhone.Location = new System.Drawing.Point(208, 172);
             this.textUserPhone.Name = "textUserPhone";
             this.textUserPhone.Size = new System.Drawing.Size(199, 21);
-            this.textUserPhone.TabIndex = 1;
+            this.textUserPhone.TabIndex = 6;
             // 
             // label7
             // 
@@ -280,7 +280,7 @@
             this.textUserRealName.Location = new System.Drawing.Point(208, 199);
             this.textUserRealName.Name = "textUserRealName";
             this.textUserRealName.Size = new System.Drawing.Size(199, 21);
-            this.textUserRealName.TabIndex = 1;
+            this.textUserRealName.TabIndex = 7;
             // 
             // label8
             // 
@@ -297,7 +297,7 @@
             this.textUserAddress.Location = new System.Drawing.Point(208, 253);
             this.textUserAddress.Name = "textUserAddress";
             this.textUserAddress.Size = new System.Drawing.Size(199, 21);
-            this.textUserAddress.TabIndex = 1;
+            this.textUserAddress.TabIndex = 9;
             // 
             // label9
             // 
@@ -314,7 +314,7 @@
             this.textUserIdentity.Location = new System.Drawing.Point(208, 280);
             this.textUserIdentity.Name = "textUserIdentity";
             this.textUserIdentity.Size = new System.Drawing.Size(199, 21);
-            this.textUserIdentity.TabIndex = 1;
+            this.textUserIdentity.TabIndex = 10;
             // 
             // label10
             // 
@@ -331,7 +331,7 @@
             this.textDriLicsense.Location = new System.Drawing.Point(208, 307);
             this.textDriLicsense.Name = "textDriLicsense";
             this.textDriLicsense.Size = new System.Drawing.Size(199, 21);
-            this.textDriLicsense.TabIndex = 1;
+            this.textDriLicsense.TabIndex = 11;
             // 
             // label11
             // 
@@ -348,7 +348,7 @@
             this.buttonUserConfirm.Location = new System.Drawing.Point(128, 365);
             this.buttonUserConfirm.Name = "buttonUserConfirm";
             this.buttonUserConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonUserConfirm.TabIndex = 2;
+            this.buttonUserConfirm.TabIndex = 12;
             this.buttonUserConfirm.Text = "确 定";
             this.buttonUserConfirm.UseVisualStyleBackColor = true;
             this.buttonUserConfirm.Click += new System.EventHandler(this.buttonUserConfirm_Click);
@@ -358,7 +358,7 @@
             this.buttonUserCancel.Location = new System.Drawing.Point(316, 365);
             this.buttonUserCancel.Name = "buttonUserCancel";
             this.buttonUserCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonUserCancel.TabIndex = 3;
+            this.buttonUserCancel.TabIndex = 13;
             this.buttonUserCancel.Text = "取 消";
             this.buttonUserCancel.UseVisualStyleBackColor = true;
             this.buttonUserCancel.Click += new System.EventHandler(this.buttonUserCancel_Click);
@@ -374,7 +374,7 @@
             this.userGenderBox.Location = new System.Drawing.Point(208, 227);
             this.userGenderBox.Name = "userGenderBox";
             this.userGenderBox.Size = new System.Drawing.Size(199, 20);
-            this.userGenderBox.TabIndex = 4;
+            this.userGenderBox.TabIndex = 8;
             this.userGenderBox.Text = "男";
             // 
             // adminGenderBox
@@ -388,7 +388,7 @@
             this.adminGenderBox.Location = new System.Drawing.Point(208, 253);
             this.adminGenderBox.Name = "adminGenderBox";
             this.adminGenderBox.Size = new System.Drawing.Size(199, 20);
-            this.adminGenderBox.TabIndex = 28;
+            this.adminGenderBox.TabIndex = 26;
             this.adminGenderBox.Text = "男";
             // 
             // buttonAdminCancel
@@ -396,7 +396,7 @@
             this.buttonAdminCancel.Location = new System.Drawing.Point(316, 365);
             this.buttonAdminCancel.Name = "buttonAdminCancel";
             this.buttonAdminCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdminCancel.TabIndex = 27;
+            this.buttonAdminCancel.TabIndex = 30;
             this.buttonAdminCancel.Text = "取 消";
             this.buttonAdminCancel.UseVisualStyleBackColor = true;
             this.buttonAdminCancel.Click += new System.EventHandler(this.buttonAdminCancel_Click);
@@ -406,7 +406,7 @@
             this.buttonAdminConfirm.Location = new System.Drawing.Point(128, 365);
             this.buttonAdminConfirm.Name = "buttonAdminConfirm";
             this.buttonAdminConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdminConfirm.TabIndex = 26;
+            this.buttonAdminConfirm.TabIndex = 29;
             this.buttonAdminConfirm.Text = "确 定";
             this.buttonAdminConfirm.UseVisualStyleBackColor = true;
             this.buttonAdminConfirm.Click += new System.EventHandler(this.buttonAdminConfirm_Click);
@@ -426,7 +426,7 @@
             this.textAdminIdentity.Location = new System.Drawing.Point(208, 306);
             this.textAdminIdentity.Name = "textAdminIdentity";
             this.textAdminIdentity.Size = new System.Drawing.Size(199, 21);
-            this.textAdminIdentity.TabIndex = 17;
+            this.textAdminIdentity.TabIndex = 28;
             // 
             // label14
             // 
@@ -443,7 +443,7 @@
             this.textAdminAddress.Location = new System.Drawing.Point(208, 279);
             this.textAdminAddress.Name = "textAdminAddress";
             this.textAdminAddress.Size = new System.Drawing.Size(199, 21);
-            this.textAdminAddress.TabIndex = 16;
+            this.textAdminAddress.TabIndex = 27;
             // 
             // label15
             // 
@@ -460,7 +460,7 @@
             this.textAdminRealName.Location = new System.Drawing.Point(208, 225);
             this.textAdminRealName.Name = "textAdminRealName";
             this.textAdminRealName.Size = new System.Drawing.Size(199, 21);
-            this.textAdminRealName.TabIndex = 18;
+            this.textAdminRealName.TabIndex = 25;
             // 
             // label16
             // 
@@ -477,7 +477,7 @@
             this.textAdminPhone.Location = new System.Drawing.Point(208, 198);
             this.textAdminPhone.Name = "textAdminPhone";
             this.textAdminPhone.Size = new System.Drawing.Size(199, 21);
-            this.textAdminPhone.TabIndex = 20;
+            this.textAdminPhone.TabIndex = 24;
             // 
             // label17
             // 
@@ -495,7 +495,7 @@
             this.textControlCheckPwd.Name = "textControlCheckPwd";
             this.textControlCheckPwd.PasswordChar = '●';
             this.textControlCheckPwd.Size = new System.Drawing.Size(199, 21);
-            this.textControlCheckPwd.TabIndex = 21;
+            this.textControlCheckPwd.TabIndex = 23;
             // 
             // label18
             // 
@@ -513,7 +513,7 @@
             this.textControlPwd.Name = "textControlPwd";
             this.textControlPwd.PasswordChar = '●';
             this.textControlPwd.Size = new System.Drawing.Size(199, 21);
-            this.textControlPwd.TabIndex = 23;
+            this.textControlPwd.TabIndex = 22;
             // 
             // label19
             // 
@@ -531,7 +531,7 @@
             this.textAdminCheckPwd.Name = "textAdminCheckPwd";
             this.textAdminCheckPwd.PasswordChar = '●';
             this.textAdminCheckPwd.Size = new System.Drawing.Size(199, 21);
-            this.textAdminCheckPwd.TabIndex = 24;
+            this.textAdminCheckPwd.TabIndex = 21;
             // 
             // label20
             // 
@@ -549,7 +549,7 @@
             this.textAdminPwd.Name = "textAdminPwd";
             this.textAdminPwd.PasswordChar = '●';
             this.textAdminPwd.Size = new System.Drawing.Size(199, 21);
-            this.textAdminPwd.TabIndex = 25;
+            this.textAdminPwd.TabIndex = 20;
             // 
             // label21
             // 

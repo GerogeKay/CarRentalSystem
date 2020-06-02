@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CRSBLL;
 using MODEL;
 
 namespace CarRentalSystem
@@ -16,6 +17,7 @@ namespace CarRentalSystem
     {
         UserInfo userInfo = new UserInfo();
         AdminInfo adminInfo = new AdminInfo();
+        AdminDal adminDal = new AdminDal();
         public SignInWindow()
         {
             InitializeComponent();
@@ -204,6 +206,28 @@ namespace CarRentalSystem
             adminInfo.AdminAddress = textAdminAddress.Text.Trim();
             adminInfo.AdminIdentity = textAdminIdentity.Text.Trim();
             // 录入管理员信息到数据库
+            int adminCount = adminDal.CountAdmin();
+            if (adminCount==0)
+            {
+                if (adminDal.InsertAdmin(adminInfo))
+                {
+                    MessageBox.Show("管理员录入成功", "注册提示");
+                }
+                else
+                {
+                    MessageBox.Show("管理员录入失败", "注册提示");
+                }
+                //MessageBox.Show(adminDal.InsertAdmin(adminInfo), "注册提示");
+            }
+            else if(adminCount > 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("管理员录入失败，数据库连接失败", "注册提示");
+            }
+            this.Cursor = Cursors.Default;
             //b1 = userBLL.InsertUser(user);
             //bool b = new LogBLL().LogInsert(logInfo);
         }

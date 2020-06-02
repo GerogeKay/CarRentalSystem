@@ -14,18 +14,7 @@ namespace CRSCOMMON
     {
 
         //Database connection strings
-        //public static readonly string ConnectionStringShop = ConfigurationManager.ConnectionStrings["BMConnectionStringLocal"].ConnectionString;
         public static readonly string ConnectionStringShop = "user id=sa;password=123456;Database=CarRentalSystem;Server=localhost;min pool size=4;max pool size=4;";
-        // public static readonly string ConnectionStringShop = "user id=sa;password=dreamtech_1012_1;Database=BMSYSTEM;Server=10.14.4.167;min pool size=4;max pool size=4;";
-        //public static readonly string ConnectionStringShop = "user id=PPOMSystem;password=dreamtech_2010;Database=BMSYSTEM;Server=218.202.132.162;min pool size=4;max pool size=4;";// ConfigurationManager.ConnectionStrings["ConnectingString"].ConnectionString;// "server=223.4.122.116;database=ECommerce2;uid=sa;pwd=9z7x9s5y3y;min pool size=4;max pool size=4;";// //
-        //    public static readonly string ConnectionStringOrder = ConfigurationManager.ConnectionStrings["OrderConnectString"].ConnectionString;
-        //public static readonly string ConnectionStringUser = ConfigurationManager.ConnectionStrings["UserConnectString"].ConnectionString;
-
-
-        //"server=202.206.212.66;database=ECommerce;uid=weiwei;pwd=880210;min pool size=4;max pool size=4;";// 
-        // "server=202.206.212.66;database=ECommerceOrder;uid=weiwei;pwd=880210;min pool size=4;max pool size=4
-        //"server=202.206.212.66;database=ECommerceUser;uid=weiwei;pwd=880210;min pool size=4;max pool size=4;"
-
         // Hashtable to store cached parameters
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
