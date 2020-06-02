@@ -30,6 +30,7 @@
         {
             this.LoginPages = new System.Windows.Forms.TabControl();
             this.UserPage = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.userSignUpButton = new System.Windows.Forms.Button();
             this.userLoginButton = new System.Windows.Forms.Button();
             this.userPwdTextBox = new System.Windows.Forms.TextBox();
@@ -38,14 +39,13 @@
             this.userNameLabel = new System.Windows.Forms.Label();
             this.AdminPage = new System.Windows.Forms.TabPage();
             this.adminSignUpButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.adminLoginButton = new System.Windows.Forms.Button();
             this.adminPwdTextBox = new System.Windows.Forms.TextBox();
             this.adminNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPwdLabel = new System.Windows.Forms.Label();
             this.adminNameLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.LoginPages.SuspendLayout();
             this.UserPage.SuspendLayout();
             this.AdminPage.SuspendLayout();
@@ -77,6 +77,17 @@
             this.UserPage.Size = new System.Drawing.Size(792, 425);
             this.UserPage.TabIndex = 0;
             this.UserPage.Text = "用户登录";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(215, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(375, 35);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "车辆租赁信息管理系统";
             // 
             // userSignUpButton
             // 
@@ -162,6 +173,17 @@
             this.adminSignUpButton.UseVisualStyleBackColor = true;
             this.adminSignUpButton.Click += new System.EventHandler(this.adminSignUpButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(215, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 35);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "车辆租赁信息管理系统";
+            // 
             // adminLoginButton
             // 
             this.adminLoginButton.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -171,6 +193,7 @@
             this.adminLoginButton.TabIndex = 10;
             this.adminLoginButton.Text = "登  录";
             this.adminLoginButton.UseVisualStyleBackColor = true;
+            this.adminLoginButton.Click += new System.EventHandler(this.adminLoginButton_Click);
             // 
             // adminPwdTextBox
             // 
@@ -207,17 +230,6 @@
             this.adminNameLabel.TabIndex = 6;
             this.adminNameLabel.Text = "用户名";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(215, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 35);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "车辆租赁信息管理系统";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -227,17 +239,6 @@
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "© 软件工程6组";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(215, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(375, 35);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "车辆租赁信息管理系统";
             // 
             // UserLogin
             // 

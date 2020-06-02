@@ -76,6 +76,61 @@ namespace CRSBLL
                 return -1;
             }
         }
+        #region 管理员登录
+        /// <summary>
+        /// 管理员登录
+        /// </summary>
+        /// <param name="adminInfo"></param>
+        /// <returns></returns>
+        public AdminInfo SelectAdminByNameAndPwd(AdminInfo adminInfo)
+        {
+            string sql = "ADMIN_SELECT_BY_NAME_AND_PWD";
+            try
+            {
+                SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@NAME",SqlDbType.VarChar,50),
+                    new SqlParameter("@PWD", SqlDbType.VarChar,50)
+                };
+                para[0].Value = adminInfo.AdminName;
+                para[1].Value = adminInfo.AdminPwd;
+                dt = new DataTable();
+                using(SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
+                {
+                    dt.Load(dr);
+                }
+                if (dt.Rows.Count == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    AdminInfo adminTemp = new AdminInfo();
+                    adminTemp.AdminId = Convert.ToInt32(dt.Rows[0]["ID"]);
+                    adminTemp.AdminName = Convert.ToString(dt.Rows[0]["NAME"]);
+                    adminTemp.AdminPwd = Convert.ToString(dt.Rows[0]["PWD"]);
+                    adminTemp.AdminControlPwd = Convert.ToString(dt.Rows[0]["CONTROLPWD"]);
+                    adminTemp.AdminRealName = Convert.ToString(dt.Rows[0]["REALNAME"]);
+                    adminTemp.AdminPhone = Convert.ToString(dt.Rows[0]["PHONE"]);
+                    adminTemp.AdminAddress = Convert.ToString(dt.Rows[0]["ADDRESS"]);
+                    adminTemp.AdminIdentity = Convert.ToString(dt.Rows[0]["IDENTITY"]);
+                    adminTemp.Gender = (AdminInfo.GenderEnum)Convert.ToInt32(dt.Rows[0]["GENDER"]);
+                    try
+                    {
+                        adminTemp.AdminPhoto = (byte[])dt.Rows[0]["PHOTO"];
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                    return adminTemp;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         #endregion
 
         #region 添加管理员信息

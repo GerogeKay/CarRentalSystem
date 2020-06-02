@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdminDal.cs" />
     <Compile Include="AuditDal.cs" />
+    <Compile Include="LogDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
