@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="AdminDal.cs" />
     <Compile Include="AuditDal.cs" />
+    <Compile Include="DeviceDal.cs" />
     <Compile Include="LogDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CRSCOMMON\CRSCOMMON.csproj">

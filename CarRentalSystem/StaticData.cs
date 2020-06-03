@@ -10,6 +10,8 @@ namespace CarRentalSystem
     public static class StaticData
     {
         public static AdminInfo adminLocal = null;
-        public static AdminInfo userLocal = null;
+        public static UserInfo userLocal = null;
+        public static DeviceInfo deviceLocal = null;
+        public static StoreInfo storeLocal = null;
     }
 }

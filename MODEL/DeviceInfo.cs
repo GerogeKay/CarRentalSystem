@@ -11,18 +11,16 @@ namespace MODEL
         // 设备ID
         int deviceId;
         // 店铺ID
-        int dpId;
+        int storeId;
         // 设备Mac
         string deviceMac;
         // 所属商店
-        string deviceStore;
-        // 商店地址
-        string deviceAddress;
-
+        public DeviceInfo()
+        {
+            storeId = 0;
+        }
         public int DeviceId { get => deviceId; set => deviceId = value; }
-        public int DpId { get => dpId; set => dpId = value; }
         public string DeviceMac { get => deviceMac; set => deviceMac = value; }
-        public string DeviceStore { get => deviceStore; set => deviceStore = value; }
-        public string DeviceAddress { get => deviceAddress; set => deviceAddress = value; }
+        public int StoreId { get => storeId; set => storeId = value; }
     }
 }

@@ -28,8 +28,14 @@ namespace CRSCOMMON
                 mo.Dispose();
             }
             Console.WriteLine(macAddr);
-            //return "60-a4-4c-60-7e-ae";
-            return macAddr;
+            if (macAddr != null)
+            {
+                return macAddr.ToUpper();
+            }
+            else
+            {
+                return "00-00-00-00-00-00";
+            }
         }
     }
 }

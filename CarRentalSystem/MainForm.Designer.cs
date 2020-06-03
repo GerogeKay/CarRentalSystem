@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label UserIDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.UserIDLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.租车还车系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.租车ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,8 +50,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DevicePanel = new System.Windows.Forms.Panel();
             this.DevicePictureBox = new System.Windows.Forms.PictureBox();
-            this.shopAddrLabel = new System.Windows.Forms.Label();
-            this.ShopNameLabel = new System.Windows.Forms.Label();
+            this.storeAddrLabel = new System.Windows.Forms.Label();
+            this.storeNameLabel = new System.Windows.Forms.Label();
             this.DeviceIDLabel = new System.Windows.Forms.Label();
             this.LostCarButton = new System.Windows.Forms.Button();
             this.returnCarButton = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@
             this.UserInfoPanel = new System.Windows.Forms.Panel();
             this.UserPicture = new System.Windows.Forms.PictureBox();
             this.Moneylabel = new System.Windows.Forms.Label();
-            this.UserLevelLabel = new System.Windows.Forms.Label();
+            this.UserTypeLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.InfoListPanel = new System.Windows.Forms.Panel();
             this.InfoListView = new System.Windows.Forms.ListView();
@@ -73,7 +73,8 @@
             this.colCarId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShopAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            UserIDLabel = new System.Windows.Forms.Label();
+            this.管理员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.店铺信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
@@ -85,14 +86,14 @@
             // 
             // UserIDLabel
             // 
-            UserIDLabel.AutoSize = true;
-            UserIDLabel.Font = new System.Drawing.Font("宋体", 12F);
-            UserIDLabel.Location = new System.Drawing.Point(233, 26);
-            UserIDLabel.Name = "UserIDLabel";
-            UserIDLabel.Size = new System.Drawing.Size(64, 16);
-            UserIDLabel.TabIndex = 0;
-            UserIDLabel.Text = "用户ID:";
-            UserIDLabel.Click += new System.EventHandler(this.label1_Click);
+            this.UserIDLabel.AutoSize = true;
+            this.UserIDLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.UserIDLabel.Location = new System.Drawing.Point(233, 26);
+            this.UserIDLabel.Name = "UserIDLabel";
+            this.UserIDLabel.Size = new System.Drawing.Size(64, 16);
+            this.UserIDLabel.TabIndex = 0;
+            this.UserIDLabel.Text = "用户ID:";
+            this.UserIDLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
             // 
@@ -180,9 +181,11 @@
             // 管理系统ToolStripMenuItem
             // 
             this.管理系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.用户管理ToolStripMenuItem,
             this.车辆信息管理ToolStripMenuItem,
-            this.扣费规则管理ToolStripMenuItem});
+            this.扣费规则管理ToolStripMenuItem,
+            this.用户管理ToolStripMenuItem,
+            this.管理员信息ToolStripMenuItem,
+            this.店铺信息管理ToolStripMenuItem});
             this.管理系统ToolStripMenuItem.Name = "管理系统ToolStripMenuItem";
             this.管理系统ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
             this.管理系统ToolStripMenuItem.Text = "管理系统";
@@ -190,19 +193,19 @@
             // 用户管理ToolStripMenuItem
             // 
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
             // 
             // 车辆信息管理ToolStripMenuItem
             // 
             this.车辆信息管理ToolStripMenuItem.Name = "车辆信息管理ToolStripMenuItem";
-            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.车辆信息管理ToolStripMenuItem.Text = "车辆信息管理";
             // 
             // 扣费规则管理ToolStripMenuItem
             // 
             this.扣费规则管理ToolStripMenuItem.Name = "扣费规则管理ToolStripMenuItem";
-            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.扣费规则管理ToolStripMenuItem.Text = "扣费规则管理";
             // 
             // 充值系统ToolStripMenuItem
@@ -247,8 +250,8 @@
             this.DevicePanel.BackColor = System.Drawing.Color.GhostWhite;
             this.DevicePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DevicePanel.Controls.Add(this.DevicePictureBox);
-            this.DevicePanel.Controls.Add(this.shopAddrLabel);
-            this.DevicePanel.Controls.Add(this.ShopNameLabel);
+            this.DevicePanel.Controls.Add(this.storeAddrLabel);
+            this.DevicePanel.Controls.Add(this.storeNameLabel);
             this.DevicePanel.Controls.Add(this.DeviceIDLabel);
             this.DevicePanel.Controls.Add(this.LostCarButton);
             this.DevicePanel.Controls.Add(this.returnCarButton);
@@ -271,27 +274,27 @@
             this.DevicePictureBox.TabIndex = 4;
             this.DevicePictureBox.TabStop = false;
             // 
-            // shopAddrLabel
+            // storeAddrLabel
             // 
-            this.shopAddrLabel.AutoSize = true;
-            this.shopAddrLabel.Font = new System.Drawing.Font("宋体", 12F);
-            this.shopAddrLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.shopAddrLabel.Location = new System.Drawing.Point(235, 88);
-            this.shopAddrLabel.Name = "shopAddrLabel";
-            this.shopAddrLabel.Size = new System.Drawing.Size(80, 16);
-            this.shopAddrLabel.TabIndex = 3;
-            this.shopAddrLabel.Text = "店铺地址:";
+            this.storeAddrLabel.AutoSize = true;
+            this.storeAddrLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.storeAddrLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.storeAddrLabel.Location = new System.Drawing.Point(235, 88);
+            this.storeAddrLabel.Name = "storeAddrLabel";
+            this.storeAddrLabel.Size = new System.Drawing.Size(80, 16);
+            this.storeAddrLabel.TabIndex = 3;
+            this.storeAddrLabel.Text = "店铺地址:";
             // 
-            // ShopNameLabel
+            // storeNameLabel
             // 
-            this.ShopNameLabel.AutoSize = true;
-            this.ShopNameLabel.Font = new System.Drawing.Font("宋体", 12F);
-            this.ShopNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ShopNameLabel.Location = new System.Drawing.Point(235, 57);
-            this.ShopNameLabel.Name = "ShopNameLabel";
-            this.ShopNameLabel.Size = new System.Drawing.Size(80, 16);
-            this.ShopNameLabel.TabIndex = 3;
-            this.ShopNameLabel.Text = "所属店铺:";
+            this.storeNameLabel.AutoSize = true;
+            this.storeNameLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.storeNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.storeNameLabel.Location = new System.Drawing.Point(235, 57);
+            this.storeNameLabel.Name = "storeNameLabel";
+            this.storeNameLabel.Size = new System.Drawing.Size(80, 16);
+            this.storeNameLabel.TabIndex = 3;
+            this.storeNameLabel.Text = "所属店铺:";
             // 
             // DeviceIDLabel
             // 
@@ -348,9 +351,9 @@
             this.UserInfoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserInfoPanel.Controls.Add(this.UserPicture);
             this.UserInfoPanel.Controls.Add(this.Moneylabel);
-            this.UserInfoPanel.Controls.Add(this.UserLevelLabel);
+            this.UserInfoPanel.Controls.Add(this.UserTypeLabel);
             this.UserInfoPanel.Controls.Add(this.UserNameLabel);
-            this.UserInfoPanel.Controls.Add(UserIDLabel);
+            this.UserInfoPanel.Controls.Add(this.UserIDLabel);
             this.UserInfoPanel.Font = new System.Drawing.Font("宋体", 12F);
             this.UserInfoPanel.Location = new System.Drawing.Point(812, 3);
             this.UserInfoPanel.Name = "UserInfoPanel";
@@ -380,16 +383,16 @@
             this.Moneylabel.Text = "余额:";
             this.Moneylabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // UserLevelLabel
+            // UserTypeLabel
             // 
-            this.UserLevelLabel.AutoSize = true;
-            this.UserLevelLabel.Font = new System.Drawing.Font("宋体", 12F);
-            this.UserLevelLabel.Location = new System.Drawing.Point(233, 88);
-            this.UserLevelLabel.Name = "UserLevelLabel";
-            this.UserLevelLabel.Size = new System.Drawing.Size(80, 16);
-            this.UserLevelLabel.TabIndex = 0;
-            this.UserLevelLabel.Text = "用户类型:";
-            this.UserLevelLabel.Click += new System.EventHandler(this.label1_Click);
+            this.UserTypeLabel.AutoSize = true;
+            this.UserTypeLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.UserTypeLabel.Location = new System.Drawing.Point(233, 88);
+            this.UserTypeLabel.Name = "UserTypeLabel";
+            this.UserTypeLabel.Size = new System.Drawing.Size(80, 16);
+            this.UserTypeLabel.TabIndex = 0;
+            this.UserTypeLabel.Text = "用户类型:";
+            this.UserTypeLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // UserNameLabel
             // 
@@ -397,9 +400,9 @@
             this.UserNameLabel.Font = new System.Drawing.Font("宋体", 12F);
             this.UserNameLabel.Location = new System.Drawing.Point(233, 57);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(80, 16);
+            this.UserNameLabel.Size = new System.Drawing.Size(64, 16);
             this.UserNameLabel.TabIndex = 0;
-            this.UserNameLabel.Text = "登录用户:";
+            this.UserNameLabel.Text = "用户名:";
             this.UserNameLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // InfoListPanel
@@ -501,6 +504,18 @@
             this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colShopAddress.Width = 250;
             // 
+            // 管理员信息ToolStripMenuItem
+            // 
+            this.管理员信息ToolStripMenuItem.Name = "管理员信息ToolStripMenuItem";
+            this.管理员信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.管理员信息ToolStripMenuItem.Text = "管理员信息";
+            // 
+            // 店铺信息管理ToolStripMenuItem
+            // 
+            this.店铺信息管理ToolStripMenuItem.Name = "店铺信息管理ToolStripMenuItem";
+            this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -538,7 +553,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel DevicePanel;
         private System.Windows.Forms.Panel UserInfoPanel;
-        private System.Windows.Forms.Label UserLevelLabel;
+        private System.Windows.Forms.Label UserTypeLabel;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 租车ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 还车ToolStripMenuItem;
@@ -565,14 +580,17 @@
         private System.Windows.Forms.ColumnHeader colCarId;
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.PictureBox DevicePictureBox;
-        private System.Windows.Forms.Label shopAddrLabel;
-        private System.Windows.Forms.Label ShopNameLabel;
+        private System.Windows.Forms.Label storeAddrLabel;
+        private System.Windows.Forms.Label storeNameLabel;
         private System.Windows.Forms.Label DeviceIDLabel;
         private System.Windows.Forms.Button LostCarButton;
         private System.Windows.Forms.Button returnCarButton;
         private System.Windows.Forms.Button rentCarButton;
         private System.Windows.Forms.ColumnHeader colShopAddress;
         private System.Windows.Forms.ColumnHeader colUserID;
+        private System.Windows.Forms.ToolStripMenuItem 管理员信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 店铺信息管理ToolStripMenuItem;
+        private System.Windows.Forms.Label UserIDLabel;
     }
 }
 

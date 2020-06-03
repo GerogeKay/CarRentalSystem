@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CRSBLL;
+using CRSCOMMON;
+using MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,89 @@ namespace CarRentalSystem
 {
     public partial class MainForm : Form
     {
+        OtherHelper otherHelper = new OtherHelper();
+        DeviceDal deviceDal = new DeviceDal();
+        StoreDal storeDal = new StoreDal();
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        #region 窗体加载
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadUserInfo();
+            LoadDeviceAndStore();
+            
+            
+
+        }
+        #endregion
+
+        
+        /// <summary>
+        /// 载入用户信息
+        /// </summary>
+        private void LoadUserInfo()
+        {
+            if (StaticData.adminLocal!=null)
+            {
+                UserIDLabel.Text = "用户ID:" + StaticData.adminLocal.AdminId;
+                UserNameLabel.Text = "用户名:" + StaticData.adminLocal.AdminName;
+                UserTypeLabel.Text = "用户类型:" + "管理员";
+                Moneylabel.Text = "";
+            }
+            else if (StaticData.userLocal != null)
+            {
+                UserIDLabel.Text = "用户ID:" + StaticData.userLocal.UserId;
+                UserNameLabel.Text = "用户名:" + StaticData.userLocal.UserName;
+                UserTypeLabel.Text = "用户类型:" + "用户";
+                Moneylabel.Text = "余额:"+ StaticData.userLocal.RemainMoney+"￥";
+            }
+        }
+        /// <summary>
+        /// 载入设备和店铺信息
+        /// </summary>
+        private void LoadDeviceAndStore()
+        {
+            DeviceInfo deviceInfo = new DeviceInfo();
+            string localMac = otherHelper.getMacAddrLocal();
+            deviceInfo.DeviceMac = localMac;
+            DeviceIDLabel.Text = "设备号:" + localMac;
+            // 查看数据库里有没有这个设备，没有则添加
+            deviceInfo = deviceDal.SelectByMac(deviceInfo);
+            if (deviceInfo == null)
+            {
+                // 插入新的设备信息
+                deviceInfo = new DeviceInfo();
+                deviceInfo.DeviceMac = localMac;
+                bool b = deviceDal.InsertDevice(deviceInfo);
+                if (!b)
+                {
+                    deviceInfo.DeviceId = 0;
+                    deviceInfo.StoreId = 0;
+                    MessageBox.Show("无法添加设备到数据库！", "警告");
+                }
+                else
+                {
+                    deviceInfo = deviceDal.SelectByMac(deviceInfo);
+                }
+            }
+            StaticData.deviceLocal = deviceInfo;
+            StoreInfo storeInfo;
+            if (StaticData.deviceLocal.StoreId != 0)
+            {
+                storeInfo = storeDal.StoreSelectById(StaticData.deviceLocal.StoreId);
+            }
+            else
+            {
+                storeInfo = new StoreInfo();
+                storeInfo.StoreName = "上海电机学院分店";
+                storeInfo.StoreAddress = "上海浦东新区水华路300号";
+            }
+            StaticData.storeLocal = storeInfo;
+            storeNameLabel.Text = "所属店铺:" + StaticData.storeLocal.StoreName;
+            storeAddrLabel.Text = "店铺地址:" + StaticData.storeLocal.StoreAddress;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,11 +119,6 @@ namespace CarRentalSystem
         {
 
         }
-        #region 窗体加载
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
+        
     }
 }
