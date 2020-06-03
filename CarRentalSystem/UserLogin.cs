@@ -17,6 +17,7 @@ namespace CarRentalSystem
         AdminInfo adminInfo;
         UserInfo userInfo;
         AdminDal adminDal = new AdminDal();
+        UserDal userDal = new UserDal();
         LogDal logDal = new LogDal();
         public UserLogin()
         {
@@ -69,6 +70,47 @@ namespace CarRentalSystem
                 logInfo.Content = "管理员" + adminInfo.AdminName + "登录了系统";
                 bool b = logDal.LogInsert(logInfo);
                 StaticData.adminLocal = adminInfo;
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("用户名或密码错误", "登录提示");
+            }
+        }
+        #endregion
+
+        #region 用户登录按钮事件
+        /// <summary>
+        /// 用户登录按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void userLoginButton_Click(object sender, EventArgs e)
+        {
+            if (userNameTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("请输入用户名！", "登录提示");
+                return;
+            }
+            else if (userPwdTextBox.Text == "")
+            {
+                MessageBox.Show("请输入用户密码！", "登录提示");
+                return;
+            }
+            userInfo = new UserInfo();
+            userInfo.UserName = userNameTextBox.Text.Trim();
+            userInfo.UserPwd = userPwdTextBox.Text;
+            userInfo = userDal.SelectUserByNameAndPwd(userInfo);
+            if (userInfo != null)
+            {
+                this.Hide();
+                LogInfo logInfo = new LogInfo();
+                logInfo.UserId = userInfo.UserId;
+                logInfo.LogTime = DateTime.Now;
+                logInfo.Content = "用户" + userInfo.UserName + "登录了系统";
+                bool b = logDal.LogInsert(logInfo);
+                StaticData.userLocal = userInfo;
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
             }

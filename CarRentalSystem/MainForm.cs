@@ -119,6 +119,11 @@ namespace CarRentalSystem
         {
 
         }
-        
+
+        private void 审核列表ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuditListForm auditListForm = new AuditListForm();
+            auditListForm.Show();
+        }
     }
 }

@@ -523,6 +523,7 @@
             this.审核列表ToolStripMenuItem.Name = "审核列表ToolStripMenuItem";
             this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.审核列表ToolStripMenuItem.Text = "审核列表";
+            this.审核列表ToolStripMenuItem.Click += new System.EventHandler(this.审核列表ToolStripMenuItem_Click);
             // 
             // MainForm
             // 

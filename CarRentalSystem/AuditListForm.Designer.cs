@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvAuditList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colAuditId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,7 +65,6 @@
             this.label1.Size = new System.Drawing.Size(120, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "---审核列表---";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 
@@ -78,6 +77,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -88,9 +88,9 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "审核类型:";
             // 
-            // listView1
+            // lvAuditList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvAuditList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.colAuditId,
             this.colName,
@@ -99,16 +99,17 @@
             this.colIdentity,
             this.colAddress,
             this.colLicense});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 88);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(864, 362);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvAuditList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lvAuditList.FullRowSelect = true;
+            this.lvAuditList.GridLines = true;
+            this.lvAuditList.HideSelection = false;
+            this.lvAuditList.Location = new System.Drawing.Point(0, 88);
+            this.lvAuditList.Name = "lvAuditList";
+            this.lvAuditList.Size = new System.Drawing.Size(864, 362);
+            this.lvAuditList.TabIndex = 3;
+            this.lvAuditList.UseCompatibleStateImageBehavior = false;
+            this.lvAuditList.View = System.Windows.Forms.View.Details;
+            this.lvAuditList.SelectedIndexChanged += new System.EventHandler(this.lvAuditList_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -163,6 +164,7 @@
             this.buttonPass.TabIndex = 4;
             this.buttonPass.Text = "通过";
             this.buttonPass.UseVisualStyleBackColor = true;
+            this.buttonPass.Click += new System.EventHandler(this.buttonPass_Click);
             // 
             // buttonReject
             // 
@@ -180,7 +182,7 @@
             this.ClientSize = new System.Drawing.Size(864, 450);
             this.Controls.Add(this.buttonReject);
             this.Controls.Add(this.buttonPass);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvAuditList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
@@ -200,7 +202,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvAuditList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader colAuditId;
         private System.Windows.Forms.ColumnHeader colName;

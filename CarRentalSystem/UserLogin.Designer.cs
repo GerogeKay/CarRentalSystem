@@ -109,6 +109,7 @@
             this.userLoginButton.TabIndex = 4;
             this.userLoginButton.Text = "登  录";
             this.userLoginButton.UseVisualStyleBackColor = true;
+            this.userLoginButton.Click += new System.EventHandler(this.userLoginButton_Click);
             // 
             // userPwdTextBox
             // 
