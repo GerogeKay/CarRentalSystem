@@ -13,7 +13,7 @@ namespace CRSBLL
     /// <summary>
     /// 用来提交审核信息的数据库访问类
     /// </summary>
-    class AuditDal
+    public class AuditDal
     {
         #region 提交审核信息
         /// <summary>

@@ -110,6 +110,37 @@ namespace CarRentalSystem
                 MessageBox.Show("请输入驾驶证号码", "注册提示");
                 return;
             }
+            if (textDriLicsense.Text.Trim().Length != 12)
+            {
+                MessageBox.Show("无效驾驶证号码", "注册提示");
+                return;
+            }
+            if (textDriLicsense.Text.Trim().Substring(0,3) != textUserIdentity.Text.Trim().Substring(0,3))
+            {
+                MessageBox.Show("无效驾驶证号码", "注册提示");
+                return;
+            }
+            userInfo.UserName = textUserName.Text.Trim();
+            userInfo.UserPwd = textUserPwd.Text;
+            userInfo.UserPayPwd = textPayPwd.Text;
+            userInfo.UserRealName = textUserRealName.Text.Trim();
+            userInfo.UserPhone = textUserPhone.Text.Trim();
+            userInfo.Gender = (UserInfo.GenderEnum)userGenderBox.SelectedIndex;
+            userInfo.UserIdentity = textUserIdentity.Text.Trim();
+            userInfo.UserAddress = textUserAddress.Text.Trim();
+            userInfo.UserDriLicense = textDriLicsense.Text.Trim();
+            userInfo.RemainMoney = 0m;
+            userInfo.UserPhoto = null;
+            AuditRequest auditRequest = new AuditRequest(userInfo);
+            AuditDal auditDal = new AuditDal();
+            if (auditDal.CommitRequest(auditRequest))
+            {
+                MessageBox.Show("已提交用户信息，等待管理员审核","注册提示");
+            }
+            else
+            {
+                MessageBox.Show("提交用户信息失败，可能连接服务器失败", "注册提示");
+            }
         }
 
         private void buttonAdminConfirm_Click(object sender, EventArgs e)
@@ -221,7 +252,18 @@ namespace CarRentalSystem
             }
             else if(adminCount > 0)
             {
+                // 添加审核信息到数据库
+                AuditRequest auditRequest = new AuditRequest(adminInfo);
+                AuditDal auditDal = new AuditDal();
+                if (auditDal.CommitRequest(auditRequest))
+                {
+                    MessageBox.Show("已提交注册申请，请等待管理员审核", "注册提示");
 
+                }
+                else
+                {
+                    MessageBox.Show("提交注册申请失败！可能与服务器连接失败", "注册提示");
+                }
             }
             else
             {

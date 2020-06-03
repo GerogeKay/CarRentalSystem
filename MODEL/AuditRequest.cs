@@ -16,12 +16,12 @@ namespace MODEL
         bool isPass;
         bool check;
 
-        AuditRequest()
+        public AuditRequest()
         {
 
         }
 
-        AuditRequest(AdminInfo adminInfo)
+        public AuditRequest(AdminInfo adminInfo)
         {
             id = -1;
             auditType = "Sign in Admin";
@@ -30,7 +30,7 @@ namespace MODEL
             isPass = false;
             check = false;
         }
-        AuditRequest(UserInfo userInfo)
+        public AuditRequest(UserInfo userInfo)
         {
             id = -1;
             auditType = "Sign in User";
