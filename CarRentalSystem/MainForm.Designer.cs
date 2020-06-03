@@ -75,6 +75,7 @@
             this.colShopAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.管理员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.店铺信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.审核列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
@@ -185,7 +186,8 @@
             this.扣费规则管理ToolStripMenuItem,
             this.用户管理ToolStripMenuItem,
             this.管理员信息ToolStripMenuItem,
-            this.店铺信息管理ToolStripMenuItem});
+            this.店铺信息管理ToolStripMenuItem,
+            this.审核列表ToolStripMenuItem});
             this.管理系统ToolStripMenuItem.Name = "管理系统ToolStripMenuItem";
             this.管理系统ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
             this.管理系统ToolStripMenuItem.Text = "管理系统";
@@ -516,6 +518,12 @@
             this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
             // 
+            // 审核列表ToolStripMenuItem
+            // 
+            this.审核列表ToolStripMenuItem.Name = "审核列表ToolStripMenuItem";
+            this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.审核列表ToolStripMenuItem.Text = "审核列表";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -591,6 +599,7 @@
         private System.Windows.Forms.ToolStripMenuItem 管理员信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 店铺信息管理ToolStripMenuItem;
         private System.Windows.Forms.Label UserIDLabel;
+        private System.Windows.Forms.ToolStripMenuItem 审核列表ToolStripMenuItem;
     }
 }
 

@@ -24,7 +24,7 @@ namespace MODEL
         public AuditRequest(AdminInfo adminInfo)
         {
             id = -1;
-            auditType = "Sign in Admin";
+            auditType = "管理员注册";
             content = JsonConvert.SerializeObject(adminInfo);
             auditorId = -1;
             isPass = false;
@@ -33,7 +33,7 @@ namespace MODEL
         public AuditRequest(UserInfo userInfo)
         {
             id = -1;
-            auditType = "Sign in User";
+            auditType = "用户注册";
             content = JsonConvert.SerializeObject(userInfo);
             auditorId = -1;
             isPass = false;

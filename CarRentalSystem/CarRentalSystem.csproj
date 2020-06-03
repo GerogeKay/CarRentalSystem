@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditListForm.Designer.cs">
+      <DependentUpon>AuditListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignInWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AuditListForm.resx">
+      <DependentUpon>AuditListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignInWindow.resx">
       <DependentUpon>SignInWindow.cs</DependentUpon>
     </EmbeddedResource>
