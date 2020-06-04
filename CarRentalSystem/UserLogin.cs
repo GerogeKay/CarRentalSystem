@@ -70,6 +70,7 @@ namespace CarRentalSystem
                 logInfo.Content = "管理员" + adminInfo.AdminName + "登录了系统";
                 bool b = logDal.LogInsert(logInfo);
                 StaticData.adminLocal = adminInfo;
+                StaticData.userLocal = null;
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
             }
@@ -111,6 +112,7 @@ namespace CarRentalSystem
                 logInfo.Content = "用户" + userInfo.UserName + "登录了系统";
                 bool b = logDal.LogInsert(logInfo);
                 StaticData.userLocal = userInfo;
+                StaticData.adminLocal = null;
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
             }

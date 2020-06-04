@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStoreFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStoreFrom.Designer.cs">
+      <DependentUpon>AddStoreFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuditListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +81,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StaticData.cs" />
+    <Compile Include="StoreManageFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreManageFrom.Designer.cs">
+      <DependentUpon>StoreManageFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStoreForm.Designer.cs">
+      <DependentUpon>UpdateStoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStoreFrom.resx">
+      <DependentUpon>AddStoreFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuditListForm.resx">
       <DependentUpon>AuditListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +115,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreManageFrom.resx">
+      <DependentUpon>StoreManageFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStoreForm.resx">
+      <DependentUpon>UpdateStoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

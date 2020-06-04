@@ -11,9 +11,10 @@ namespace MODEL
         int storeId;
         string storeName;
         string storeAddress;
-
+        bool isDelete;
         public int StoreId { get => storeId; set => storeId = value; }
         public string StoreName { get => storeName; set => storeName = value; }
         public string StoreAddress { get => storeAddress; set => storeAddress = value; }
+        public bool IsDelete { get => isDelete; set => isDelete = value; }
     }
 }

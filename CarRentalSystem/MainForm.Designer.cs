@@ -49,7 +49,6 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DevicePanel = new System.Windows.Forms.Panel();
-            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
             this.storeAddrLabel = new System.Windows.Forms.Label();
             this.storeNameLabel = new System.Windows.Forms.Label();
             this.DeviceIDLabel = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             this.returnCarButton = new System.Windows.Forms.Button();
             this.rentCarButton = new System.Windows.Forms.Button();
             this.UserInfoPanel = new System.Windows.Forms.Panel();
-            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.Moneylabel = new System.Windows.Forms.Label();
             this.UserTypeLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
@@ -68,7 +66,6 @@
             this.colUserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colBorrowKind = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colStartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colBorrowNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCarId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,13 +73,15 @@
             this.管理员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.店铺信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.审核列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
+            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).BeginInit();
             this.UserInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).BeginInit();
             this.InfoListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // UserIDLabel
@@ -158,26 +157,27 @@
             // 租还车查询ToolStripMenuItem
             // 
             this.租还车查询ToolStripMenuItem.Name = "租还车查询ToolStripMenuItem";
-            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.租还车查询ToolStripMenuItem.Text = "租还车查询";
             // 
             // 充值查询ToolStripMenuItem
             // 
             this.充值查询ToolStripMenuItem.Name = "充值查询ToolStripMenuItem";
-            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.充值查询ToolStripMenuItem.Text = "充值查询";
             // 
             // 用户查询ToolStripMenuItem
             // 
             this.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem";
-            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.用户查询ToolStripMenuItem.Text = "用户查询";
             // 
             // 日志信息ToolStripMenuItem
             // 
             this.日志信息ToolStripMenuItem.Name = "日志信息ToolStripMenuItem";
-            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.日志信息ToolStripMenuItem.Text = "日志信息";
+            this.日志信息ToolStripMenuItem.Click += new System.EventHandler(this.日志信息ToolStripMenuItem_Click);
             // 
             // 管理系统ToolStripMenuItem
             // 
@@ -203,6 +203,7 @@
             this.车辆信息管理ToolStripMenuItem.Name = "车辆信息管理ToolStripMenuItem";
             this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.车辆信息管理ToolStripMenuItem.Text = "车辆信息管理";
+            this.车辆信息管理ToolStripMenuItem.Click += new System.EventHandler(this.车辆信息管理ToolStripMenuItem_Click);
             // 
             // 扣费规则管理ToolStripMenuItem
             // 
@@ -264,22 +265,10 @@
             this.DevicePanel.TabIndex = 0;
             this.DevicePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // DevicePictureBox
-            // 
-            this.DevicePictureBox.BackColor = System.Drawing.Color.GhostWhite;
-            this.DevicePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DevicePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DevicePictureBox.Image")));
-            this.DevicePictureBox.Location = new System.Drawing.Point(19, 13);
-            this.DevicePictureBox.Name = "DevicePictureBox";
-            this.DevicePictureBox.Size = new System.Drawing.Size(200, 200);
-            this.DevicePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DevicePictureBox.TabIndex = 4;
-            this.DevicePictureBox.TabStop = false;
-            // 
             // storeAddrLabel
             // 
             this.storeAddrLabel.AutoSize = true;
-            this.storeAddrLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.storeAddrLabel.Font = new System.Drawing.Font("黑体", 12F);
             this.storeAddrLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.storeAddrLabel.Location = new System.Drawing.Point(235, 88);
             this.storeAddrLabel.Name = "storeAddrLabel";
@@ -290,7 +279,7 @@
             // storeNameLabel
             // 
             this.storeNameLabel.AutoSize = true;
-            this.storeNameLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.storeNameLabel.Font = new System.Drawing.Font("黑体", 12F);
             this.storeNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.storeNameLabel.Location = new System.Drawing.Point(235, 57);
             this.storeNameLabel.Name = "storeNameLabel";
@@ -301,7 +290,7 @@
             // DeviceIDLabel
             // 
             this.DeviceIDLabel.AutoSize = true;
-            this.DeviceIDLabel.Font = new System.Drawing.Font("宋体", 12F);
+            this.DeviceIDLabel.Font = new System.Drawing.Font("黑体", 12F);
             this.DeviceIDLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.DeviceIDLabel.Location = new System.Drawing.Point(235, 26);
             this.DeviceIDLabel.Name = "DeviceIDLabel";
@@ -362,18 +351,6 @@
             this.UserInfoPanel.Size = new System.Drawing.Size(449, 226);
             this.UserInfoPanel.TabIndex = 1;
             // 
-            // UserPicture
-            // 
-            this.UserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UserPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserPicture.Image = global::CarRentalSystem.Properties.Resources.蓝底空白头像;
-            this.UserPicture.Location = new System.Drawing.Point(13, 13);
-            this.UserPicture.Name = "UserPicture";
-            this.UserPicture.Size = new System.Drawing.Size(200, 200);
-            this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserPicture.TabIndex = 1;
-            this.UserPicture.TabStop = false;
-            // 
             // Moneylabel
             // 
             this.Moneylabel.AutoSize = true;
@@ -432,7 +409,6 @@
             this.colUserName,
             this.colBorrowKind,
             this.colStartTime,
-            this.colBorrowNum,
             this.colPhone,
             this.colCarId,
             this.colShop,
@@ -476,12 +452,6 @@
             this.colStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colStartTime.Width = 100;
             // 
-            // colBorrowNum
-            // 
-            this.colBorrowNum.Text = "租借数量";
-            this.colBorrowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colBorrowNum.Width = 80;
-            // 
             // colPhone
             // 
             this.colPhone.Text = "电话号码";
@@ -517,6 +487,7 @@
             this.店铺信息管理ToolStripMenuItem.Name = "店铺信息管理ToolStripMenuItem";
             this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
+            this.店铺信息管理ToolStripMenuItem.Click += new System.EventHandler(this.店铺信息管理ToolStripMenuItem_Click);
             // 
             // 审核列表ToolStripMenuItem
             // 
@@ -524,6 +495,30 @@
             this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.审核列表ToolStripMenuItem.Text = "审核列表";
             this.审核列表ToolStripMenuItem.Click += new System.EventHandler(this.审核列表ToolStripMenuItem_Click);
+            // 
+            // DevicePictureBox
+            // 
+            this.DevicePictureBox.BackColor = System.Drawing.Color.GhostWhite;
+            this.DevicePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DevicePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DevicePictureBox.Image")));
+            this.DevicePictureBox.Location = new System.Drawing.Point(19, 13);
+            this.DevicePictureBox.Name = "DevicePictureBox";
+            this.DevicePictureBox.Size = new System.Drawing.Size(200, 200);
+            this.DevicePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DevicePictureBox.TabIndex = 4;
+            this.DevicePictureBox.TabStop = false;
+            // 
+            // UserPicture
+            // 
+            this.UserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UserPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserPicture.Image = global::CarRentalSystem.Properties.Resources.蓝底空白头像;
+            this.UserPicture.Location = new System.Drawing.Point(13, 13);
+            this.UserPicture.Name = "UserPicture";
+            this.UserPicture.Size = new System.Drawing.Size(200, 200);
+            this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserPicture.TabIndex = 1;
+            this.UserPicture.TabStop = false;
             // 
             // MainForm
             // 
@@ -542,11 +537,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.DevicePanel.ResumeLayout(false);
             this.DevicePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).EndInit();
             this.UserInfoPanel.ResumeLayout(false);
             this.UserInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).EndInit();
             this.InfoListPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,7 +578,6 @@
         private System.Windows.Forms.ColumnHeader colUserName;
         private System.Windows.Forms.ColumnHeader colBorrowKind;
         private System.Windows.Forms.ColumnHeader colStartTime;
-        private System.Windows.Forms.ColumnHeader colBorrowNum;
         private System.Windows.Forms.ColumnHeader colPhone;
         private System.Windows.Forms.ColumnHeader colShop;
         private System.Windows.Forms.ColumnHeader colCarId;

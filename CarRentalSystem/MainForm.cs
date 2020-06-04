@@ -46,6 +46,7 @@ namespace CarRentalSystem
                 UserNameLabel.Text = "用户名:" + StaticData.adminLocal.AdminName;
                 UserTypeLabel.Text = "用户类型:" + "管理员";
                 Moneylabel.Text = "";
+                AdminManageEnabled(true);
             }
             else if (StaticData.userLocal != null)
             {
@@ -53,7 +54,17 @@ namespace CarRentalSystem
                 UserNameLabel.Text = "用户名:" + StaticData.userLocal.UserName;
                 UserTypeLabel.Text = "用户类型:" + "用户";
                 Moneylabel.Text = "余额:"+ StaticData.userLocal.RemainMoney+"￥";
+                AdminManageEnabled(false);
             }
+        }
+        void AdminManageEnabled(bool b)
+        {
+            审核列表ToolStripMenuItem.Enabled = b;
+            审核列表ToolStripMenuItem.Visible = b;
+            店铺信息管理ToolStripMenuItem.Enabled = b;
+            店铺信息管理ToolStripMenuItem.Visible = b;
+            车辆信息管理ToolStripMenuItem.Enabled = b;
+            车辆信息管理ToolStripMenuItem.Visible = b;
         }
         /// <summary>
         /// 载入设备和店铺信息
@@ -124,6 +135,22 @@ namespace CarRentalSystem
         {
             AuditListForm auditListForm = new AuditListForm();
             auditListForm.Show();
+        }
+
+        private void 日志信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 车辆信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 店铺信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StoreManageFrom storeManageFrom = new StoreManageFrom();
+            storeManageFrom.Show();
         }
     }
 }

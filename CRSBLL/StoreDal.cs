@@ -34,6 +34,7 @@ namespace CRSBLL
                 return false;
             }
         }
+
         #endregion
 
         #region 更新商店信息
@@ -86,6 +87,36 @@ namespace CRSBLL
             catch (Exception)
             {
                 return null;
+            }
+        }
+        #endregion
+
+        #region 获取全部店铺的信息
+        public List<StoreInfo> GetStoreList()
+        {
+            string sql = "SELECT * FROM STORE_INFO WHERE IS_DELETE=0";
+            List<StoreInfo> storeInfos = new List<StoreInfo>();
+            try
+            {
+                dt = new DataTable();
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.Text, sql))
+                {
+                    dt.Load(dr);
+                }
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    StoreInfo storeTemp = new StoreInfo();
+                    storeTemp.StoreId = Convert.ToInt32(dt.Rows[i]["ID"]);
+                    storeTemp.StoreName = Convert.ToString(dt.Rows[i]["NAME"]);
+                    storeTemp.StoreAddress = Convert.ToString(dt.Rows[i]["ADDRESS"]);
+                    storeInfos.Add(storeTemp);
+                }
+                return storeInfos;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
         #endregion

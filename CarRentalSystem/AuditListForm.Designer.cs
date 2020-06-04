@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 12F);
-            this.label1.Location = new System.Drawing.Point(385, 16);
+            this.label1.Location = new System.Drawing.Point(378, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 16);
             this.label1.TabIndex = 0;
@@ -188,7 +188,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "AuditListForm";
-            this.Text = "AuditListForm";
+            this.Text = "审核列表";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
