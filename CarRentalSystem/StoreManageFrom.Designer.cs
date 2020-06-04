@@ -104,6 +104,7 @@
             // 
             // buttonAddStore
             // 
+            this.buttonAddStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddStore.Location = new System.Drawing.Point(616, 56);
             this.buttonAddStore.Name = "buttonAddStore";
             this.buttonAddStore.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +115,7 @@
             // 
             // buttonUpdateStore
             // 
+            this.buttonUpdateStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdateStore.Location = new System.Drawing.Point(697, 56);
             this.buttonUpdateStore.Name = "buttonUpdateStore";
             this.buttonUpdateStore.Size = new System.Drawing.Size(91, 23);
@@ -124,6 +126,7 @@
             // 
             // buttonRefreshList
             // 
+            this.buttonRefreshList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRefreshList.Location = new System.Drawing.Point(535, 56);
             this.buttonRefreshList.Name = "buttonRefreshList";
             this.buttonRefreshList.Size = new System.Drawing.Size(75, 23);

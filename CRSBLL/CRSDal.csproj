@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdminDal.cs" />
     <Compile Include="AuditDal.cs" />
+    <Compile Include="CarDal.cs" />
     <Compile Include="DeviceDal.cs" />
     <Compile Include="LogDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

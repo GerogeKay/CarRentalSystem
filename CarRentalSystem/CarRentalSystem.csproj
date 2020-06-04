@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCarForm.Designer.cs">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStoreFrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="AuditListForm.Designer.cs">
       <DependentUpon>AuditListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarManageForm.Designer.cs">
+      <DependentUpon>CarManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectStoreForm.cs">
       <SubType>Form</SubType>
@@ -93,6 +105,12 @@
     <Compile Include="StoreManageFrom.Designer.cs">
       <DependentUpon>StoreManageFrom.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCarForm.Designer.cs">
+      <DependentUpon>UpdateCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +123,17 @@
     <Compile Include="UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCarForm.resx">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStoreFrom.resx">
       <DependentUpon>AddStoreFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuditListForm.resx">
       <DependentUpon>AuditListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarManageForm.resx">
+      <DependentUpon>CarManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectStoreForm.resx">
       <DependentUpon>SelectStoreForm.cs</DependentUpon>
@@ -127,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StoreManageFrom.resx">
       <DependentUpon>StoreManageFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCarForm.resx">
+      <DependentUpon>UpdateCarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStoreForm.resx">
       <DependentUpon>UpdateStoreForm.cs</DependentUpon>

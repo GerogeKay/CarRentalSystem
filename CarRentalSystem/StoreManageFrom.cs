@@ -37,6 +37,7 @@ namespace CarRentalSystem
                 lvStoreList.Items[i].SubItems.Add("");
                 lvStoreList.Items[i].SubItems.Add("");
                 lvStoreList.Items[i].SubItems.Add("");
+                lvStoreList.Items[i].SubItems.Add("");
                 lvStoreList.Items[i].SubItems[1].Text = storeInfos[i].StoreId.ToString();
                 lvStoreList.Items[i].SubItems[2].Text = storeInfos[i].StoreName.ToString();
                 lvStoreList.Items[i].SubItems[3].Text = storeInfos[i].StoreAddress.ToString();

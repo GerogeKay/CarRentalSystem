@@ -134,7 +134,7 @@ namespace CarRentalSystem
         private void 审核列表ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AuditListForm auditListForm = new AuditListForm();
-            auditListForm.Show();
+            auditListForm.ShowDialog();
         }
 
         private void 日志信息ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,13 +144,14 @@ namespace CarRentalSystem
 
         private void 车辆信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CarManageForm carManageForm = new CarManageForm();
+            carManageForm.ShowDialog();
         }
 
         private void 店铺信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StoreManageFrom storeManageFrom = new StoreManageFrom();
-            storeManageFrom.Show();
+            storeManageFrom.ShowDialog();
         }
 
         private void MainForm_Activated(object sender, EventArgs e)
@@ -162,7 +163,7 @@ namespace CarRentalSystem
         private void btnSelectStore_Click(object sender, EventArgs e)
         {
             SelectStoreForm selectStoreForm = new SelectStoreForm();
-            selectStoreForm.Show();
+            selectStoreForm.ShowDialog();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
