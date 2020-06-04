@@ -17,7 +17,8 @@ namespace CarRentalSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainForm());
-            Application.Run(new UserLogin());
+            StaticData.userLoginLocal = new UserLogin();
+            Application.Run(StaticData.userLoginLocal);
         }
     }
 }

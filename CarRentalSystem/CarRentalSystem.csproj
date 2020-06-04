@@ -61,6 +61,12 @@
     <Compile Include="AuditListForm.Designer.cs">
       <DependentUpon>AuditListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectStoreForm.Designer.cs">
+      <DependentUpon>SelectStoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignInWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuditListForm.resx">
       <DependentUpon>AuditListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectStoreForm.resx">
+      <DependentUpon>SelectStoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInWindow.resx">
       <DependentUpon>SignInWindow.cs</DependentUpon>

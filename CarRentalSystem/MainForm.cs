@@ -152,5 +152,22 @@ namespace CarRentalSystem
             StoreManageFrom storeManageFrom = new StoreManageFrom();
             storeManageFrom.Show();
         }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            LoadUserInfo();
+            LoadDeviceAndStore();
+        }
+
+        private void btnSelectStore_Click(object sender, EventArgs e)
+        {
+            SelectStoreForm selectStoreForm = new SelectStoreForm();
+            selectStoreForm.Show();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            StaticData.userLoginLocal.Close();
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace CarRentalSystem
         public static UserInfo userLocal = null;
         public static DeviceInfo deviceLocal = null;
         public static StoreInfo storeLocal = null;
+        public static UserLogin userLoginLocal = null;
     }
 }
