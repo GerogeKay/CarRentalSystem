@@ -12,6 +12,7 @@ namespace MODEL
         {
             在库,
             借出,
+            到期未还,
             挂失,
         }
         // 车辆ID

@@ -71,8 +71,15 @@ namespace CarRentalSystem
                 bool b = logDal.LogInsert(logInfo);
                 StaticData.adminLocal = adminInfo;
                 StaticData.userLocal = null;
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
+                if (StaticData.mainFormLocal == null)
+                {
+                    StaticData.mainFormLocal = new MainForm();
+                    StaticData.mainFormLocal.Show();
+                }
+                else
+                {
+                    StaticData.mainFormLocal.Show();
+                }
             }
             else
             {
@@ -113,8 +120,15 @@ namespace CarRentalSystem
                 bool b = logDal.LogInsert(logInfo);
                 StaticData.userLocal = userInfo;
                 StaticData.adminLocal = null;
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
+                if (StaticData.mainFormLocal==null)
+                {
+                    StaticData.mainFormLocal = new MainForm();
+                    StaticData.mainFormLocal.Show();
+                }
+                else
+                {
+                    StaticData.mainFormLocal.Show();
+                }
             }
             else
             {

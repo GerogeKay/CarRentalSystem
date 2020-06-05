@@ -67,6 +67,12 @@
     <Compile Include="AddStoreFrom.Designer.cs">
       <DependentUpon>AddStoreFrom.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminRechargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRechargeForm.Designer.cs">
+      <DependentUpon>AdminRechargeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuditListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddStoreFrom.resx">
       <DependentUpon>AddStoreFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRechargeForm.resx">
+      <DependentUpon>AdminRechargeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuditListForm.resx">
       <DependentUpon>AuditListForm.cs</DependentUpon>

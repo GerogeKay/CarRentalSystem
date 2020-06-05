@@ -53,7 +53,7 @@ namespace CarRentalSystem
                 UserIDLabel.Text = "用户ID:" + StaticData.userLocal.UserId;
                 UserNameLabel.Text = "用户名:" + StaticData.userLocal.UserName;
                 UserTypeLabel.Text = "用户类型:" + "用户";
-                Moneylabel.Text = "余额:"+ StaticData.userLocal.RemainMoney+"￥";
+                Moneylabel.Text = "余额:"+ StaticData.userLocal.RemainMoney.ToString("C");
                 AdminManageEnabled(false);
             }
         }
@@ -123,7 +123,8 @@ namespace CarRentalSystem
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            StaticData.userLoginLocal.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -185,6 +186,20 @@ namespace CarRentalSystem
         {
             CostRuleManageForm costRuleManageForm = new CostRuleManageForm();
             costRuleManageForm.ShowDialog();
+        }
+
+        private void 充值系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (StaticData.adminLocal != null)
+            {
+                AdminRechargeForm adminRechargeForm = new AdminRechargeForm();
+                adminRechargeForm.ShowDialog();
+            }
+        }
+
+        private void btnRefreshList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
