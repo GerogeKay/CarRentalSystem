@@ -170,5 +170,21 @@ namespace CarRentalSystem
         {
             StaticData.userLoginLocal.Close();
         }
+
+        private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 管理员信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 扣费规则管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CostRuleManageForm costRuleManageForm = new CostRuleManageForm();
+            costRuleManageForm.ShowDialog();
+        }
     }
 }

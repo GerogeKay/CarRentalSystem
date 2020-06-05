@@ -50,7 +50,7 @@ namespace CarRentalSystem
         private void buttonAddStore_Click(object sender, EventArgs e)
         {
             AddStoreFrom addStoreFrom = new AddStoreFrom();
-            addStoreFrom.Show();
+            addStoreFrom.ShowDialog();
         }
 
         private void StoreManageFrom_Load(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace CarRentalSystem
                 int storeId = Convert.ToInt32(lvStoreList.SelectedItems[0].SubItems[1].Text);
                 StoreInfo storeTemp = storeDal.StoreSelectById(storeId);
                 UpdateStoreForm updateStoreForm = new UpdateStoreForm(storeTemp);
-                updateStoreForm.Show();
+                updateStoreForm.ShowDialog();
             }
             else
             {

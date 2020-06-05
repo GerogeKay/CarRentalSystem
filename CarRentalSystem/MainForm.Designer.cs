@@ -41,14 +41,19 @@
             this.用户查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日志信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.车辆信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.扣费规则管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.管理员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.店铺信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.审核列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.充值系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DevicePanel = new System.Windows.Forms.Panel();
+            this.btnSelectStore = new System.Windows.Forms.Button();
+            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
             this.storeAddrLabel = new System.Windows.Forms.Label();
             this.storeNameLabel = new System.Windows.Forms.Label();
             this.DeviceIDLabel = new System.Windows.Forms.Label();
@@ -56,6 +61,7 @@
             this.returnCarButton = new System.Windows.Forms.Button();
             this.rentCarButton = new System.Windows.Forms.Button();
             this.UserInfoPanel = new System.Windows.Forms.Panel();
+            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.Moneylabel = new System.Windows.Forms.Label();
             this.UserTypeLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
@@ -70,19 +76,16 @@
             this.colCarId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colShopAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.管理员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.店铺信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.审核列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSelectStore = new System.Windows.Forms.Button();
-            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
-            this.UserPicture = new System.Windows.Forms.PictureBox();
+            this.btnRelet = new System.Windows.Forms.Button();
+            this.续租ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRefreshList = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
-            this.UserInfoPanel.SuspendLayout();
-            this.InfoListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).BeginInit();
+            this.UserInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).BeginInit();
+            this.InfoListPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // UserIDLabel
@@ -119,6 +122,7 @@
             this.租车还车系统ToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.租车还车系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.租车ToolStripMenuItem,
+            this.续租ToolStripMenuItem,
             this.还车ToolStripMenuItem,
             this.挂失ToolStripMenuItem});
             this.租车还车系统ToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
@@ -129,19 +133,19 @@
             // 租车ToolStripMenuItem
             // 
             this.租车ToolStripMenuItem.Name = "租车ToolStripMenuItem";
-            this.租车ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.租车ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.租车ToolStripMenuItem.Text = "租车";
             // 
             // 还车ToolStripMenuItem
             // 
             this.还车ToolStripMenuItem.Name = "还车ToolStripMenuItem";
-            this.还车ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.还车ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.还车ToolStripMenuItem.Text = "还车";
             // 
             // 挂失ToolStripMenuItem
             // 
             this.挂失ToolStripMenuItem.Name = "挂失ToolStripMenuItem";
-            this.挂失ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.挂失ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.挂失ToolStripMenuItem.Text = "挂失";
             // 
             // 查询系统ToolStripMenuItem
@@ -193,24 +197,47 @@
             this.管理系统ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
             this.管理系统ToolStripMenuItem.Text = "管理系统";
             // 
-            // 用户管理ToolStripMenuItem
-            // 
-            this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.用户管理ToolStripMenuItem.Text = "用户管理";
-            // 
             // 车辆信息管理ToolStripMenuItem
             // 
             this.车辆信息管理ToolStripMenuItem.Name = "车辆信息管理ToolStripMenuItem";
-            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.车辆信息管理ToolStripMenuItem.Text = "车辆信息管理";
             this.车辆信息管理ToolStripMenuItem.Click += new System.EventHandler(this.车辆信息管理ToolStripMenuItem_Click);
             // 
             // 扣费规则管理ToolStripMenuItem
             // 
             this.扣费规则管理ToolStripMenuItem.Name = "扣费规则管理ToolStripMenuItem";
-            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.扣费规则管理ToolStripMenuItem.Text = "扣费规则管理";
+            this.扣费规则管理ToolStripMenuItem.Click += new System.EventHandler(this.扣费规则管理ToolStripMenuItem_Click);
+            // 
+            // 用户管理ToolStripMenuItem
+            // 
+            this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.用户管理ToolStripMenuItem.Text = "用户管理";
+            this.用户管理ToolStripMenuItem.Click += new System.EventHandler(this.用户管理ToolStripMenuItem_Click);
+            // 
+            // 管理员信息ToolStripMenuItem
+            // 
+            this.管理员信息ToolStripMenuItem.Name = "管理员信息ToolStripMenuItem";
+            this.管理员信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.管理员信息ToolStripMenuItem.Text = "管理员信息";
+            this.管理员信息ToolStripMenuItem.Click += new System.EventHandler(this.管理员信息ToolStripMenuItem_Click);
+            // 
+            // 店铺信息管理ToolStripMenuItem
+            // 
+            this.店铺信息管理ToolStripMenuItem.Name = "店铺信息管理ToolStripMenuItem";
+            this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
+            this.店铺信息管理ToolStripMenuItem.Click += new System.EventHandler(this.店铺信息管理ToolStripMenuItem_Click);
+            // 
+            // 审核列表ToolStripMenuItem
+            // 
+            this.审核列表ToolStripMenuItem.Name = "审核列表ToolStripMenuItem";
+            this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.审核列表ToolStripMenuItem.Text = "审核列表";
+            this.审核列表ToolStripMenuItem.Click += new System.EventHandler(this.审核列表ToolStripMenuItem_Click);
             // 
             // 充值系统ToolStripMenuItem
             // 
@@ -253,6 +280,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DevicePanel.BackColor = System.Drawing.Color.GhostWhite;
             this.DevicePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DevicePanel.Controls.Add(this.btnRefreshList);
             this.DevicePanel.Controls.Add(this.btnSelectStore);
             this.DevicePanel.Controls.Add(this.DevicePictureBox);
             this.DevicePanel.Controls.Add(this.storeAddrLabel);
@@ -260,12 +288,38 @@
             this.DevicePanel.Controls.Add(this.DeviceIDLabel);
             this.DevicePanel.Controls.Add(this.LostCarButton);
             this.DevicePanel.Controls.Add(this.returnCarButton);
+            this.DevicePanel.Controls.Add(this.btnRelet);
             this.DevicePanel.Controls.Add(this.rentCarButton);
             this.DevicePanel.Location = new System.Drawing.Point(3, 3);
             this.DevicePanel.Name = "DevicePanel";
             this.DevicePanel.Size = new System.Drawing.Size(803, 226);
             this.DevicePanel.TabIndex = 0;
             this.DevicePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSelectStore
+            // 
+            this.btnSelectStore.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSelectStore.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSelectStore.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSelectStore.Location = new System.Drawing.Point(426, 149);
+            this.btnSelectStore.Name = "btnSelectStore";
+            this.btnSelectStore.Size = new System.Drawing.Size(169, 30);
+            this.btnSelectStore.TabIndex = 5;
+            this.btnSelectStore.Text = "选择店铺";
+            this.btnSelectStore.UseVisualStyleBackColor = false;
+            this.btnSelectStore.Click += new System.EventHandler(this.btnSelectStore_Click);
+            // 
+            // DevicePictureBox
+            // 
+            this.DevicePictureBox.BackColor = System.Drawing.Color.GhostWhite;
+            this.DevicePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DevicePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DevicePictureBox.Image")));
+            this.DevicePictureBox.Location = new System.Drawing.Point(19, 13);
+            this.DevicePictureBox.Name = "DevicePictureBox";
+            this.DevicePictureBox.Size = new System.Drawing.Size(200, 200);
+            this.DevicePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DevicePictureBox.TabIndex = 4;
+            this.DevicePictureBox.TabStop = false;
             // 
             // storeAddrLabel
             // 
@@ -285,9 +339,9 @@
             this.storeNameLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             this.storeNameLabel.Location = new System.Drawing.Point(235, 57);
             this.storeNameLabel.Name = "storeNameLabel";
-            this.storeNameLabel.Size = new System.Drawing.Size(80, 16);
+            this.storeNameLabel.Size = new System.Drawing.Size(64, 16);
             this.storeNameLabel.TabIndex = 3;
-            this.storeNameLabel.Text = "所属店铺:";
+            this.storeNameLabel.Text = "店铺名:";
             // 
             // DeviceIDLabel
             // 
@@ -352,6 +406,18 @@
             this.UserInfoPanel.Name = "UserInfoPanel";
             this.UserInfoPanel.Size = new System.Drawing.Size(449, 226);
             this.UserInfoPanel.TabIndex = 1;
+            // 
+            // UserPicture
+            // 
+            this.UserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UserPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserPicture.Image = global::CarRentalSystem.Properties.Resources.蓝底空白头像;
+            this.UserPicture.Location = new System.Drawing.Point(13, 13);
+            this.UserPicture.Name = "UserPicture";
+            this.UserPicture.Size = new System.Drawing.Size(200, 200);
+            this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserPicture.TabIndex = 1;
+            this.UserPicture.TabStop = false;
             // 
             // Moneylabel
             // 
@@ -468,7 +534,7 @@
             // 
             // colShop
             // 
-            this.colShop.Text = "店铺";
+            this.colShop.Text = "店铺名";
             this.colShop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colShop.Width = 200;
             // 
@@ -478,62 +544,36 @@
             this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colShopAddress.Width = 250;
             // 
-            // 管理员信息ToolStripMenuItem
+            // btnRelet
             // 
-            this.管理员信息ToolStripMenuItem.Name = "管理员信息ToolStripMenuItem";
-            this.管理员信息ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.管理员信息ToolStripMenuItem.Text = "管理员信息";
+            this.btnRelet.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRelet.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRelet.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRelet.Location = new System.Drawing.Point(426, 118);
+            this.btnRelet.Name = "btnRelet";
+            this.btnRelet.Size = new System.Drawing.Size(169, 30);
+            this.btnRelet.TabIndex = 0;
+            this.btnRelet.Text = "续租";
+            this.btnRelet.UseVisualStyleBackColor = false;
             // 
-            // 店铺信息管理ToolStripMenuItem
+            // 续租ToolStripMenuItem
             // 
-            this.店铺信息管理ToolStripMenuItem.Name = "店铺信息管理ToolStripMenuItem";
-            this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
-            this.店铺信息管理ToolStripMenuItem.Click += new System.EventHandler(this.店铺信息管理ToolStripMenuItem_Click);
+            this.续租ToolStripMenuItem.Name = "续租ToolStripMenuItem";
+            this.续租ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.续租ToolStripMenuItem.Text = "续租";
             // 
-            // 审核列表ToolStripMenuItem
+            // btnRefreshList
             // 
-            this.审核列表ToolStripMenuItem.Name = "审核列表ToolStripMenuItem";
-            this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.审核列表ToolStripMenuItem.Text = "审核列表";
-            this.审核列表ToolStripMenuItem.Click += new System.EventHandler(this.审核列表ToolStripMenuItem_Click);
-            // 
-            // btnSelectStore
-            // 
-            this.btnSelectStore.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSelectStore.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSelectStore.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSelectStore.Location = new System.Drawing.Point(426, 118);
-            this.btnSelectStore.Name = "btnSelectStore";
-            this.btnSelectStore.Size = new System.Drawing.Size(169, 30);
-            this.btnSelectStore.TabIndex = 5;
-            this.btnSelectStore.Text = "选择店铺";
-            this.btnSelectStore.UseVisualStyleBackColor = false;
-            this.btnSelectStore.Click += new System.EventHandler(this.btnSelectStore_Click);
-            // 
-            // DevicePictureBox
-            // 
-            this.DevicePictureBox.BackColor = System.Drawing.Color.GhostWhite;
-            this.DevicePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DevicePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DevicePictureBox.Image")));
-            this.DevicePictureBox.Location = new System.Drawing.Point(19, 13);
-            this.DevicePictureBox.Name = "DevicePictureBox";
-            this.DevicePictureBox.Size = new System.Drawing.Size(200, 200);
-            this.DevicePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DevicePictureBox.TabIndex = 4;
-            this.DevicePictureBox.TabStop = false;
-            // 
-            // UserPicture
-            // 
-            this.UserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UserPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserPicture.Image = global::CarRentalSystem.Properties.Resources.蓝底空白头像;
-            this.UserPicture.Location = new System.Drawing.Point(13, 13);
-            this.UserPicture.Name = "UserPicture";
-            this.UserPicture.Size = new System.Drawing.Size(200, 200);
-            this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserPicture.TabIndex = 1;
-            this.UserPicture.TabStop = false;
+            this.btnRefreshList.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRefreshList.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRefreshList.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefreshList.Location = new System.Drawing.Point(426, 179);
+            this.btnRefreshList.Name = "btnRefreshList";
+            this.btnRefreshList.Size = new System.Drawing.Size(169, 30);
+            this.btnRefreshList.TabIndex = 5;
+            this.btnRefreshList.Text = "刷新列表";
+            this.btnRefreshList.UseVisualStyleBackColor = false;
+            this.btnRefreshList.Click += new System.EventHandler(this.btnSelectStore_Click);
             // 
             // MainForm
             // 
@@ -554,11 +594,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.DevicePanel.ResumeLayout(false);
             this.DevicePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).EndInit();
             this.UserInfoPanel.ResumeLayout(false);
             this.UserInfoPanel.PerformLayout();
-            this.InfoListPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DevicePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).EndInit();
+            this.InfoListPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,6 +653,9 @@
         private System.Windows.Forms.Label UserIDLabel;
         private System.Windows.Forms.ToolStripMenuItem 审核列表ToolStripMenuItem;
         private System.Windows.Forms.Button btnSelectStore;
+        private System.Windows.Forms.ToolStripMenuItem 续租ToolStripMenuItem;
+        private System.Windows.Forms.Button btnRefreshList;
+        private System.Windows.Forms.Button btnRelet;
     }
 }
 

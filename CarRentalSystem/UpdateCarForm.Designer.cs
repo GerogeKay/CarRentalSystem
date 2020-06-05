@@ -67,7 +67,7 @@
             this.labelCarID.Location = new System.Drawing.Point(51, 35);
             this.labelCarID.Name = "labelCarID";
             this.labelCarID.Size = new System.Drawing.Size(47, 12);
-            this.labelCarID.TabIndex = 7;
+            this.labelCarID.TabIndex = 17;
             this.labelCarID.Text = "车辆ID:";
             // 
             // cbStoreList
@@ -77,14 +77,14 @@
             this.cbStoreList.Location = new System.Drawing.Point(115, 139);
             this.cbStoreList.Name = "cbStoreList";
             this.cbStoreList.Size = new System.Drawing.Size(208, 20);
-            this.cbStoreList.TabIndex = 21;
+            this.cbStoreList.TabIndex = 10;
             // 
             // textCarType
             // 
             this.textCarType.Location = new System.Drawing.Point(115, 84);
             this.textCarType.Name = "textCarType";
             this.textCarType.Size = new System.Drawing.Size(208, 21);
-            this.textCarType.TabIndex = 20;
+            this.textCarType.TabIndex = 8;
             // 
             // label4
             // 
@@ -101,7 +101,7 @@
             this.textCarColor.Location = new System.Drawing.Point(115, 112);
             this.textCarColor.Name = "textCarColor";
             this.textCarColor.Size = new System.Drawing.Size(208, 21);
-            this.textCarColor.TabIndex = 16;
+            this.textCarColor.TabIndex = 9;
             // 
             // label1
             // 
@@ -127,7 +127,7 @@
             this.textPlateNumber.Location = new System.Drawing.Point(115, 57);
             this.textPlateNumber.Name = "textPlateNumber";
             this.textPlateNumber.Size = new System.Drawing.Size(208, 21);
-            this.textPlateNumber.TabIndex = 17;
+            this.textPlateNumber.TabIndex = 7;
             // 
             // label6
             // 

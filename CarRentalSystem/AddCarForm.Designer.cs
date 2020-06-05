@@ -45,7 +45,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(224, 160);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.TabIndex = 12;
             this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -55,7 +55,7 @@
             this.buttoncomfirm.Location = new System.Drawing.Point(90, 160);
             this.buttoncomfirm.Name = "buttoncomfirm";
             this.buttoncomfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttoncomfirm.TabIndex = 10;
+            this.buttoncomfirm.TabIndex = 11;
             this.buttoncomfirm.Text = "确定";
             this.buttoncomfirm.UseVisualStyleBackColor = true;
             this.buttoncomfirm.Click += new System.EventHandler(this.buttoncomfirm_Click);
@@ -65,7 +65,7 @@
             this.textCarType.Location = new System.Drawing.Point(116, 55);
             this.textCarType.Name = "textCarType";
             this.textCarType.Size = new System.Drawing.Size(208, 21);
-            this.textCarType.TabIndex = 9;
+            this.textCarType.TabIndex = 8;
             // 
             // label2
             // 
@@ -108,7 +108,7 @@
             this.textCarColor.Location = new System.Drawing.Point(116, 83);
             this.textCarColor.Name = "textCarColor";
             this.textCarColor.Size = new System.Drawing.Size(208, 21);
-            this.textCarColor.TabIndex = 7;
+            this.textCarColor.TabIndex = 9;
             // 
             // label4
             // 
@@ -126,7 +126,7 @@
             this.cbStoreList.Location = new System.Drawing.Point(116, 110);
             this.cbStoreList.Name = "cbStoreList";
             this.cbStoreList.Size = new System.Drawing.Size(208, 20);
-            this.cbStoreList.TabIndex = 12;
+            this.cbStoreList.TabIndex = 10;
             // 
             // AddCarForm
             // 
