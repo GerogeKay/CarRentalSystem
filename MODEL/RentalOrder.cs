@@ -12,11 +12,21 @@ namespace MODEL
         {
             时租,日租,周租,月租,季租,年租
         }
+        enum OrderStatus
+        {
+            预约,租借中,到期未还,已还,已完成
+        }
         int orderID;
         int userID;
         int carID;
         int storeID;
         int userLevel;
-        
+        RentalType orderType;
+        DateTime startTime;
+        DateTime endTime;
+        DateTime actualTime;
+        decimal orderCost;
+        OrderStatus status;
+
     }
 }
