@@ -53,11 +53,14 @@ namespace CarRentalSystem
             }
             else if (StaticData.userLocal != null)
             {
-                UserIDLabel.Text = "用户ID:" + StaticData.userLocal.UserId;
-                UserNameLabel.Text = "用户名:" + StaticData.userLocal.UserName;
+                UserInfo userTemp = new UserInfo();
+                userTemp = userDal.SelectUserByID(StaticData.userLocal.UserId);
+                UserIDLabel.Text = "用户ID:" + userTemp.UserId;
+                UserNameLabel.Text = "用户名:" + userTemp.UserName;
                 UserTypeLabel.Text = "用户类型:" + "用户";
-                Moneylabel.Text = "余额:"+ StaticData.userLocal.RemainMoney.ToString("C");
+                Moneylabel.Text = "余额:"+ userTemp.RemainMoney.ToString("C");
                 AdminManageEnabled(false);
+                StaticData.userLocal = userTemp;
             }
         }
         void AdminManageEnabled(bool b)
@@ -266,6 +269,7 @@ namespace CarRentalSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            LoadUserInfo();
             RefreshOrders();
             CheckOrders();
         }
@@ -309,6 +313,20 @@ namespace CarRentalSystem
                     var car = carDal.GetCarById(order.CarID);
                     car.Status = CarInfo.CarStatus.到期未还;
                     carDal.CarUpdate(car);
+                    rentalOrderDal.UpdateOrder(order);
+                    RefreshList();
+                }
+            }
+            var orders2 = rentalOrderDal.GetOrders(RentalOrder.OrderStatus.已完成);
+            foreach (var order in orders)
+            {
+                if (order.EndTime > DateTime.Now)
+                {
+                    var car = carDal.GetCarById(order.CarID);
+                    car.UserId = 0;
+                    car.Status = CarInfo.CarStatus.在库;
+                    carDal.CarUpdate(car);
+                    order.EndTime = DateTime.Now;
                     rentalOrderDal.UpdateOrder(order);
                     RefreshList();
                 }

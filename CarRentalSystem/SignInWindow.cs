@@ -65,7 +65,7 @@ namespace CarRentalSystem
                 MessageBox.Show("支付密码长度最多为25位！", "注册提示");
                 return;
             }
-            if (textUserCheckPwd.Text != textUserPwd.Text)
+            if (textCheckPayPwd.Text != textPayPwd.Text)
             {
                 MessageBox.Show("支付密码两次输入不一致！", "注册提示");
                 return;
@@ -167,7 +167,7 @@ namespace CarRentalSystem
             }
             if (textAdminCheckPwd.Text != textAdminPwd.Text)
             {
-                MessageBox.Show("登录密码两次输入不一致！", "注册提示");
+                MessageBox.Show("管理密码两次输入不一致！", "注册提示");
                 return;
             }
             if (textControlPwd.Text == "")

@@ -65,6 +65,7 @@ namespace CarRentalSystem
                 new UserDal().UpdateUser(StaticData.userLocal);
                 order.OrderCost += extraCost;
             }
+            order.EndTime = DateTime.Now;
             order.Status = RentalOrder.OrderStatus.已完成;
             
             orderDal.UpdateOrder(order);

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,7 @@ namespace CarRentalSystem
             if (lvCarList.SelectedItems.Count > 0)
             {
                 int carID = Convert.ToInt32(lvCarList.SelectedItems[0].SubItems[1].Text);
+                Debug.WriteLine("选择车辆的ID是"+carID);
                 CarInfo carTemp = carDal.GetCarById(carID);
                 RentCarForm rentCarForm = new RentCarForm(carTemp);
                 rentCarForm.ShowDialog();

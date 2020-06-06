@@ -30,31 +30,31 @@
         {
             this.signInTypeControl = new System.Windows.Forms.TabControl();
             this.userSignInPage = new System.Windows.Forms.TabPage();
-            this.adminSignInPage = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textUserName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textUserPwd = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textUserCheckPwd = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textPayPwd = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textCheckPayPwd = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textUserPhone = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textUserRealName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textUserAddress = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textUserIdentity = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textDriLicsense = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.buttonUserConfirm = new System.Windows.Forms.Button();
-            this.buttonUserCancel = new System.Windows.Forms.Button();
             this.userGenderBox = new System.Windows.Forms.ComboBox();
+            this.buttonUserCancel = new System.Windows.Forms.Button();
+            this.buttonUserConfirm = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textDriLicsense = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textUserIdentity = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textUserAddress = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textUserRealName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textUserPhone = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textCheckPayPwd = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textPayPwd = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textUserCheckPwd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textUserPwd = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.adminSignInPage = new System.Windows.Forms.TabPage();
             this.adminGenderBox = new System.Windows.Forms.ComboBox();
             this.buttonAdminCancel = new System.Windows.Forms.Button();
             this.buttonAdminConfirm = new System.Windows.Forms.Button();
@@ -127,6 +127,224 @@
             this.userSignInPage.TabIndex = 0;
             this.userSignInPage.Text = "用户注册";
             // 
+            // userGenderBox
+            // 
+            this.userGenderBox.FormattingEnabled = true;
+            this.userGenderBox.Items.AddRange(new object[] {
+            "保密",
+            "男",
+            "女",
+            "跨性别"});
+            this.userGenderBox.Location = new System.Drawing.Point(208, 227);
+            this.userGenderBox.Name = "userGenderBox";
+            this.userGenderBox.Size = new System.Drawing.Size(199, 20);
+            this.userGenderBox.TabIndex = 8;
+            this.userGenderBox.Text = "男";
+            // 
+            // buttonUserCancel
+            // 
+            this.buttonUserCancel.Location = new System.Drawing.Point(316, 365);
+            this.buttonUserCancel.Name = "buttonUserCancel";
+            this.buttonUserCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonUserCancel.TabIndex = 13;
+            this.buttonUserCancel.Text = "取 消";
+            this.buttonUserCancel.UseVisualStyleBackColor = true;
+            this.buttonUserCancel.Click += new System.EventHandler(this.buttonUserCancel_Click);
+            // 
+            // buttonUserConfirm
+            // 
+            this.buttonUserConfirm.Location = new System.Drawing.Point(128, 365);
+            this.buttonUserConfirm.Name = "buttonUserConfirm";
+            this.buttonUserConfirm.Size = new System.Drawing.Size(75, 23);
+            this.buttonUserConfirm.TabIndex = 12;
+            this.buttonUserConfirm.Text = "确 定";
+            this.buttonUserConfirm.UseVisualStyleBackColor = true;
+            this.buttonUserConfirm.Click += new System.EventHandler(this.buttonUserConfirm_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("宋体", 12F);
+            this.label11.Location = new System.Drawing.Point(122, 229);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "性    别:";
+            // 
+            // textDriLicsense
+            // 
+            this.textDriLicsense.Location = new System.Drawing.Point(208, 307);
+            this.textDriLicsense.Name = "textDriLicsense";
+            this.textDriLicsense.Size = new System.Drawing.Size(199, 21);
+            this.textDriLicsense.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("宋体", 12F);
+            this.label10.Location = new System.Drawing.Point(106, 310);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "驾驶证号码:";
+            // 
+            // textUserIdentity
+            // 
+            this.textUserIdentity.Location = new System.Drawing.Point(208, 280);
+            this.textUserIdentity.Name = "textUserIdentity";
+            this.textUserIdentity.Size = new System.Drawing.Size(199, 21);
+            this.textUserIdentity.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("宋体", 12F);
+            this.label9.Location = new System.Drawing.Point(106, 283);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "身份证号码:";
+            // 
+            // textUserAddress
+            // 
+            this.textUserAddress.Location = new System.Drawing.Point(208, 253);
+            this.textUserAddress.Name = "textUserAddress";
+            this.textUserAddress.Size = new System.Drawing.Size(199, 21);
+            this.textUserAddress.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("宋体", 12F);
+            this.label8.Location = new System.Drawing.Point(122, 256);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "家庭住址:";
+            // 
+            // textUserRealName
+            // 
+            this.textUserRealName.Location = new System.Drawing.Point(208, 199);
+            this.textUserRealName.Name = "textUserRealName";
+            this.textUserRealName.Size = new System.Drawing.Size(199, 21);
+            this.textUserRealName.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 12F);
+            this.label7.Location = new System.Drawing.Point(122, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "真实姓名:";
+            // 
+            // textUserPhone
+            // 
+            this.textUserPhone.Location = new System.Drawing.Point(208, 172);
+            this.textUserPhone.Name = "textUserPhone";
+            this.textUserPhone.Size = new System.Drawing.Size(199, 21);
+            this.textUserPhone.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 12F);
+            this.label6.Location = new System.Drawing.Point(122, 175);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "电话号码:";
+            // 
+            // textCheckPayPwd
+            // 
+            this.textCheckPayPwd.Location = new System.Drawing.Point(208, 145);
+            this.textCheckPayPwd.Name = "textCheckPayPwd";
+            this.textCheckPayPwd.PasswordChar = '●';
+            this.textCheckPayPwd.Size = new System.Drawing.Size(199, 21);
+            this.textCheckPayPwd.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("宋体", 12F);
+            this.label5.Location = new System.Drawing.Point(91, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "确认支付密码:";
+            // 
+            // textPayPwd
+            // 
+            this.textPayPwd.Location = new System.Drawing.Point(208, 118);
+            this.textPayPwd.Name = "textPayPwd";
+            this.textPayPwd.PasswordChar = '●';
+            this.textPayPwd.Size = new System.Drawing.Size(199, 21);
+            this.textPayPwd.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("宋体", 12F);
+            this.label4.Location = new System.Drawing.Point(122, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "支付密码:";
+            // 
+            // textUserCheckPwd
+            // 
+            this.textUserCheckPwd.Location = new System.Drawing.Point(208, 91);
+            this.textUserCheckPwd.Name = "textUserCheckPwd";
+            this.textUserCheckPwd.PasswordChar = '●';
+            this.textUserCheckPwd.Size = new System.Drawing.Size(199, 21);
+            this.textUserCheckPwd.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F);
+            this.label3.Location = new System.Drawing.Point(90, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "确认登陆密码:";
+            // 
+            // textUserPwd
+            // 
+            this.textUserPwd.Location = new System.Drawing.Point(208, 64);
+            this.textUserPwd.Name = "textUserPwd";
+            this.textUserPwd.PasswordChar = '●';
+            this.textUserPwd.Size = new System.Drawing.Size(199, 21);
+            this.textUserPwd.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F);
+            this.label2.Location = new System.Drawing.Point(122, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "登录密码:";
+            // 
+            // textUserName
+            // 
+            this.textUserName.Location = new System.Drawing.Point(208, 37);
+            this.textUserName.Name = "textUserName";
+            this.textUserName.Size = new System.Drawing.Size(199, 21);
+            this.textUserName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F);
+            this.label1.Location = new System.Drawing.Point(122, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "用 户 名:";
+            // 
             // adminSignInPage
             // 
             this.adminSignInPage.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -158,224 +376,6 @@
             this.adminSignInPage.Size = new System.Drawing.Size(518, 424);
             this.adminSignInPage.TabIndex = 1;
             this.adminSignInPage.Text = "管理员注册";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F);
-            this.label1.Location = new System.Drawing.Point(122, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "用 户 名:";
-            // 
-            // textUserName
-            // 
-            this.textUserName.Location = new System.Drawing.Point(208, 37);
-            this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(199, 21);
-            this.textUserName.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F);
-            this.label2.Location = new System.Drawing.Point(122, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "登录密码:";
-            // 
-            // textUserPwd
-            // 
-            this.textUserPwd.Location = new System.Drawing.Point(208, 64);
-            this.textUserPwd.Name = "textUserPwd";
-            this.textUserPwd.PasswordChar = '●';
-            this.textUserPwd.Size = new System.Drawing.Size(199, 21);
-            this.textUserPwd.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F);
-            this.label3.Location = new System.Drawing.Point(90, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "确认登陆密码:";
-            // 
-            // textUserCheckPwd
-            // 
-            this.textUserCheckPwd.Location = new System.Drawing.Point(208, 91);
-            this.textUserCheckPwd.Name = "textUserCheckPwd";
-            this.textUserCheckPwd.PasswordChar = '●';
-            this.textUserCheckPwd.Size = new System.Drawing.Size(199, 21);
-            this.textUserCheckPwd.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 12F);
-            this.label4.Location = new System.Drawing.Point(122, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "支付密码:";
-            // 
-            // textPayPwd
-            // 
-            this.textPayPwd.Location = new System.Drawing.Point(208, 118);
-            this.textPayPwd.Name = "textPayPwd";
-            this.textPayPwd.PasswordChar = '●';
-            this.textPayPwd.Size = new System.Drawing.Size(199, 21);
-            this.textPayPwd.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 12F);
-            this.label5.Location = new System.Drawing.Point(91, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "确认支付密码:";
-            // 
-            // textCheckPayPwd
-            // 
-            this.textCheckPayPwd.Location = new System.Drawing.Point(208, 145);
-            this.textCheckPayPwd.Name = "textCheckPayPwd";
-            this.textCheckPayPwd.PasswordChar = '●';
-            this.textCheckPayPwd.Size = new System.Drawing.Size(199, 21);
-            this.textCheckPayPwd.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 12F);
-            this.label6.Location = new System.Drawing.Point(122, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "电话号码:";
-            // 
-            // textUserPhone
-            // 
-            this.textUserPhone.Location = new System.Drawing.Point(208, 172);
-            this.textUserPhone.Name = "textUserPhone";
-            this.textUserPhone.Size = new System.Drawing.Size(199, 21);
-            this.textUserPhone.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 12F);
-            this.label7.Location = new System.Drawing.Point(122, 202);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "真实姓名:";
-            // 
-            // textUserRealName
-            // 
-            this.textUserRealName.Location = new System.Drawing.Point(208, 199);
-            this.textUserRealName.Name = "textUserRealName";
-            this.textUserRealName.Size = new System.Drawing.Size(199, 21);
-            this.textUserRealName.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 12F);
-            this.label8.Location = new System.Drawing.Point(122, 256);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "家庭住址:";
-            // 
-            // textUserAddress
-            // 
-            this.textUserAddress.Location = new System.Drawing.Point(208, 253);
-            this.textUserAddress.Name = "textUserAddress";
-            this.textUserAddress.Size = new System.Drawing.Size(199, 21);
-            this.textUserAddress.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 12F);
-            this.label9.Location = new System.Drawing.Point(106, 283);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "身份证号码:";
-            // 
-            // textUserIdentity
-            // 
-            this.textUserIdentity.Location = new System.Drawing.Point(208, 280);
-            this.textUserIdentity.Name = "textUserIdentity";
-            this.textUserIdentity.Size = new System.Drawing.Size(199, 21);
-            this.textUserIdentity.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 12F);
-            this.label10.Location = new System.Drawing.Point(106, 310);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "驾驶证号码:";
-            // 
-            // textDriLicsense
-            // 
-            this.textDriLicsense.Location = new System.Drawing.Point(208, 307);
-            this.textDriLicsense.Name = "textDriLicsense";
-            this.textDriLicsense.Size = new System.Drawing.Size(199, 21);
-            this.textDriLicsense.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 12F);
-            this.label11.Location = new System.Drawing.Point(122, 229);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "性    别:";
-            // 
-            // buttonUserConfirm
-            // 
-            this.buttonUserConfirm.Location = new System.Drawing.Point(128, 365);
-            this.buttonUserConfirm.Name = "buttonUserConfirm";
-            this.buttonUserConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonUserConfirm.TabIndex = 12;
-            this.buttonUserConfirm.Text = "确 定";
-            this.buttonUserConfirm.UseVisualStyleBackColor = true;
-            this.buttonUserConfirm.Click += new System.EventHandler(this.buttonUserConfirm_Click);
-            // 
-            // buttonUserCancel
-            // 
-            this.buttonUserCancel.Location = new System.Drawing.Point(316, 365);
-            this.buttonUserCancel.Name = "buttonUserCancel";
-            this.buttonUserCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonUserCancel.TabIndex = 13;
-            this.buttonUserCancel.Text = "取 消";
-            this.buttonUserCancel.UseVisualStyleBackColor = true;
-            this.buttonUserCancel.Click += new System.EventHandler(this.buttonUserCancel_Click);
-            // 
-            // userGenderBox
-            // 
-            this.userGenderBox.FormattingEnabled = true;
-            this.userGenderBox.Items.AddRange(new object[] {
-            "保密",
-            "男",
-            "女",
-            "跨性别"});
-            this.userGenderBox.Location = new System.Drawing.Point(208, 227);
-            this.userGenderBox.Name = "userGenderBox";
-            this.userGenderBox.Size = new System.Drawing.Size(199, 20);
-            this.userGenderBox.TabIndex = 8;
-            this.userGenderBox.Text = "男";
             // 
             // adminGenderBox
             // 
@@ -584,6 +584,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 450);
             this.Controls.Add(this.signInTypeControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SignInWindow";
             this.Text = "注册";
             this.signInTypeControl.ResumeLayout(false);
