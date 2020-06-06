@@ -31,5 +31,10 @@ namespace CarRentalSystem
         {
             this.Close();
         }
+
+        private void ShowRentalOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

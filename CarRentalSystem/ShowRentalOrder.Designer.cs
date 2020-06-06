@@ -119,6 +119,7 @@
             this.MinimizeBox = false;
             this.Name = "ShowRentalOrder";
             this.Text = "当前订单信息";
+            this.Load += new System.EventHandler(this.ShowRentalOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

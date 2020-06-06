@@ -176,7 +176,7 @@
             // 
             this.colStoreID.Text = "所属店铺";
             this.colStoreID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colStoreID.Width = 100;
+            this.colStoreID.Width = 220;
             // 
             // colUserID
             // 

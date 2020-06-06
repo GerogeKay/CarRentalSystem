@@ -91,6 +91,12 @@
     <Compile Include="CostRuleManageForm.Designer.cs">
       <DependentUpon>CostRuleManageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LostCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LostCarForm.Designer.cs">
+      <DependentUpon>LostCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReletCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </Compile>
     <Compile Include="ReturnCarForm.Designer.cs">
       <DependentUpon>ReturnCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLostCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLostCarForm.Designer.cs">
+      <DependentUpon>SelectLostCarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectReletCarForm.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,9 @@
     <EmbeddedResource Include="CostRuleManageForm.resx">
       <DependentUpon>CostRuleManageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LostCarForm.resx">
+      <DependentUpon>LostCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReletCarForm.resx">
       <DependentUpon>ReletCarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReturnCarForm.resx">
       <DependentUpon>ReturnCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLostCarForm.resx">
+      <DependentUpon>SelectLostCarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectReletCarForm.resx">
       <DependentUpon>SelectReletCarForm.cs</DependentUpon>

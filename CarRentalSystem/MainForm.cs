@@ -181,12 +181,12 @@ namespace CarRentalSystem
 
         private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("功能开发中");
         }
 
         private void 管理员信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("功能开发中");
         }
 
         private void 扣费规则管理ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,6 +201,11 @@ namespace CarRentalSystem
             {
                 AdminRechargeForm adminRechargeForm = new AdminRechargeForm();
                 adminRechargeForm.ShowDialog();
+            }
+            else if (StaticData.userLocal != null)
+            {
+                MessageBox.Show("功能开发中");
+
             }
         }
 
@@ -232,7 +237,8 @@ namespace CarRentalSystem
         {
             if (StaticData.userLocal != null)
             {
-
+                new SelectLostCarForm().ShowDialog();
+                RefreshList();
             }
         }
 
@@ -307,6 +313,21 @@ namespace CarRentalSystem
                     RefreshList();
                 }
             }
+        }
+
+        private void 租还车查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 关于ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("功能开发中");
+        }
+
+        private void 租车还车系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

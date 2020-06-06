@@ -133,6 +133,7 @@
             this.租车还车系统ToolStripMenuItem.Name = "租车还车系统ToolStripMenuItem";
             this.租车还车系统ToolStripMenuItem.Size = new System.Drawing.Size(118, 36);
             this.租车还车系统ToolStripMenuItem.Text = "租车还车系统";
+            this.租车还车系统ToolStripMenuItem.Click += new System.EventHandler(this.租车还车系统ToolStripMenuItem_Click);
             // 
             // 租车ToolStripMenuItem
             // 
@@ -165,29 +166,34 @@
             this.查询系统ToolStripMenuItem.Name = "查询系统ToolStripMenuItem";
             this.查询系统ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
             this.查询系统ToolStripMenuItem.Text = "查询系统";
+            this.查询系统ToolStripMenuItem.Visible = false;
             // 
             // 租还车查询ToolStripMenuItem
             // 
             this.租还车查询ToolStripMenuItem.Name = "租还车查询ToolStripMenuItem";
-            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.租还车查询ToolStripMenuItem.Text = "租还车查询";
+            this.租还车查询ToolStripMenuItem.Visible = false;
+            this.租还车查询ToolStripMenuItem.Click += new System.EventHandler(this.租还车查询ToolStripMenuItem_Click);
             // 
             // 充值查询ToolStripMenuItem
             // 
             this.充值查询ToolStripMenuItem.Name = "充值查询ToolStripMenuItem";
-            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.充值查询ToolStripMenuItem.Text = "充值查询";
+            this.充值查询ToolStripMenuItem.Visible = false;
             // 
             // 用户查询ToolStripMenuItem
             // 
             this.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem";
-            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.用户查询ToolStripMenuItem.Text = "用户查询";
+            this.用户查询ToolStripMenuItem.Visible = false;
             // 
             // 日志信息ToolStripMenuItem
             // 
             this.日志信息ToolStripMenuItem.Name = "日志信息ToolStripMenuItem";
-            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.日志信息ToolStripMenuItem.Text = "日志信息";
             this.日志信息ToolStripMenuItem.Click += new System.EventHandler(this.日志信息ToolStripMenuItem_Click);
             // 
@@ -258,6 +264,7 @@
             this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
             this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(54, 36);
             this.关于ToolStripMenuItem1.Text = "关于";
+            this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
             // 
             // 退出ToolStripMenuItem
             // 
