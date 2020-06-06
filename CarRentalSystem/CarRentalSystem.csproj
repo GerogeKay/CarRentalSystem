@@ -91,11 +91,29 @@
     <Compile Include="CostRuleManageForm.Designer.cs">
       <DependentUpon>CostRuleManageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentCarForm.Designer.cs">
+      <DependentUpon>RentCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRentCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRentCarForm.Designer.cs">
+      <DependentUpon>SelectRentCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectStoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SelectStoreForm.Designer.cs">
       <DependentUpon>SelectStoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRentalOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRentalOrder.Designer.cs">
+      <DependentUpon>ShowRentalOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="SignInWindow.cs">
       <SubType>Form</SubType>
@@ -168,8 +186,17 @@
     <EmbeddedResource Include="CostRuleManageForm.resx">
       <DependentUpon>CostRuleManageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RentCarForm.resx">
+      <DependentUpon>RentCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectRentCarForm.resx">
+      <DependentUpon>SelectRentCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectStoreForm.resx">
       <DependentUpon>SelectStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRentalOrder.resx">
+      <DependentUpon>ShowRentalOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInWindow.resx">
       <DependentUpon>SignInWindow.cs</DependentUpon>

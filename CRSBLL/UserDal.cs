@@ -53,7 +53,7 @@ namespace CRSBLL
 
         #region 根据用户名返回用户
         /// <summary>
-        /// 用户名是否已存在
+        /// 根据用户名返回用户
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -67,6 +67,68 @@ namespace CRSBLL
                     new SqlParameter("@NAME", name)
                 };
                 para[0].Value = name;
+                dt = new DataTable();
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
+                {
+                    dt.Load(dr);
+                }
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Rows.Count == 0)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        UserInfo userTemp = new UserInfo();
+                        userTemp.UserId = Convert.ToInt32(dt.Rows[0]["ID"]);
+                        userTemp.UserName = Convert.ToString(dt.Rows[0]["NAME"]);
+                        userTemp.UserPwd = Convert.ToString(dt.Rows[0]["PWD"]);
+                        userTemp.UserPayPwd = Convert.ToString(dt.Rows[0]["PAYPWD"]);
+                        userTemp.UserRealName = Convert.ToString(dt.Rows[0]["REALNAME"]);
+                        userTemp.UserPhone = Convert.ToString(dt.Rows[0]["PHONE"]);
+                        userTemp.UserAddress = Convert.ToString(dt.Rows[0]["ADDRESS"]);
+                        userTemp.UserIdentity = Convert.ToString(dt.Rows[0]["IDENTITY"]);
+                        userTemp.Gender = (UserInfo.GenderEnum)Convert.ToInt32(dt.Rows[0]["GENDER"]);
+                        userTemp.UserLevel = Convert.ToInt32(dt.Rows[0]["USERLEVEL"]);
+                        userTemp.RemainMoney = Convert.ToDecimal(dt.Rows[0]["REMAINMONEY"]);
+                        userTemp.UserDriLicense = Convert.ToString(dt.Rows[0]["DRILICENSE"]);
+
+                        try
+                        {
+                            userTemp.UserPhoto = (byte[])dt.Rows[0]["PHOTO"];
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                        return userTemp;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            return null;
+        }
+        #endregion
+
+        #region 根据用户ID返回用户
+        /// <summary>
+        /// 根据用户ID返回用户
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public UserInfo SelectUserByID(int ID)
+        {
+            try
+            {
+                string sql = "USER_SELECT_BY_ID";
+                SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@NAME", ID)
+                };
                 dt = new DataTable();
                 using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
                 {

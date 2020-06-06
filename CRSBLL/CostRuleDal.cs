@@ -91,15 +91,19 @@ namespace CRSBLL
                 {
                     dt.Load(dr);
                 }
-                rule.Id = Convert.ToInt32(dt.Rows[0]["ID"]);
-                rule.UserLevel = Convert.ToInt32(dt.Rows[0]["USER_LEVEL"]);
-                rule.HourCost = Convert.ToDecimal(dt.Rows[0]["HOUR_COST"]);
-                rule.DayCost = Convert.ToDecimal(dt.Rows[0]["DAY_COST"]);
-                rule.WeekCost = Convert.ToDecimal(dt.Rows[0]["WEEK_COST"]);
-                rule.MonthCost = Convert.ToDecimal(dt.Rows[0]["MONTH_COST"]);
-                rule.SeasonCost = Convert.ToDecimal(dt.Rows[0]["SEASON_COST"]);
-                rule.YearCost = Convert.ToDecimal(dt.Rows[0]["YEAR_COST"]);
-                return rule;
+                if (dt.Rows.Count > 0)
+                {
+                    rule.Id = Convert.ToInt32(dt.Rows[0]["ID"]);
+                    rule.UserLevel = Convert.ToInt32(dt.Rows[0]["USER_LEVEL"]);
+                    rule.HourCost = Convert.ToDecimal(dt.Rows[0]["HOUR_COST"]);
+                    rule.DayCost = Convert.ToDecimal(dt.Rows[0]["DAY_COST"]);
+                    rule.WeekCost = Convert.ToDecimal(dt.Rows[0]["WEEK_COST"]);
+                    rule.MonthCost = Convert.ToDecimal(dt.Rows[0]["MONTH_COST"]);
+                    rule.SeasonCost = Convert.ToDecimal(dt.Rows[0]["SEASON_COST"]);
+                    rule.YearCost = Convert.ToDecimal(dt.Rows[0]["YEAR_COST"]);
+                    return rule;
+                }
+                else return null;
             }
             catch (Exception)
             {

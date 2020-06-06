@@ -222,5 +222,43 @@ namespace CRSBLL
             }
         }
         #endregion
+        #region 根据店铺Id获取当前可用车辆信息
+        public List<CarInfo> GetCarEnable(int storeId)
+        {
+            string sql = "SELECT_CAR_ENABLE";
+            List<CarInfo> carInfos = new List<CarInfo>();
+            try
+            {
+                SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@STORE_ID", SqlDbType.Int),
+                };
+                para[0].Value = storeId;
+                dt = new DataTable();
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
+                {
+                    dt.Load(dr);
+                }
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    CarInfo carTemp = new CarInfo();
+                    carTemp.CarId = Convert.ToInt32(dt.Rows[i]["ID"]);
+                    carTemp.CarPlateNumber = Convert.ToString(dt.Rows[i]["PLATENUMBER"]);
+                    carTemp.CarType = Convert.ToString(dt.Rows[i]["TYPE"]);
+                    carTemp.Color = Convert.ToString(dt.Rows[i]["COLOR"]);
+                    carTemp.StoreId = Convert.ToInt32(dt.Rows[i]["STORE_ID"]);
+                    carTemp.UserId = Convert.ToInt32(dt.Rows[i]["USER_ID"]);
+                    carTemp.Status = (CarInfo.CarStatus)Convert.ToInt32(dt.Rows[i]["STATUS"]);
+                    carInfos.Add(carTemp);
+                }
+                return carInfos;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
     }
 }

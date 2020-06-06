@@ -48,6 +48,7 @@
     <Compile Include="DeviceDal.cs" />
     <Compile Include="LogDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentalOrderDal.cs" />
     <Compile Include="StoreDal.cs" />
     <Compile Include="UserDal.cs" />
   </ItemGroup>

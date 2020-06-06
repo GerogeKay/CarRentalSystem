@@ -28,7 +28,11 @@ namespace CarRentalSystem
         {
             LoadUserInfo();
             LoadDeviceAndStore();
-            
+            if(StaticData.userLocal != null)
+            {
+                RentalOrderDal rentalOrderDal = new RentalOrderDal();
+                rentalOrderDal.GetOrder();
+            }
             
 
         }
@@ -65,6 +69,10 @@ namespace CarRentalSystem
             店铺信息管理ToolStripMenuItem.Visible = b;
             车辆信息管理ToolStripMenuItem.Enabled = b;
             车辆信息管理ToolStripMenuItem.Visible = b;
+            扣费规则管理ToolStripMenuItem.Enabled = b;
+            扣费规则管理ToolStripMenuItem.Visible = b;
+            管理员信息ToolStripMenuItem.Enabled = b;
+            管理员信息ToolStripMenuItem.Visible = b;
         }
         /// <summary>
         /// 载入设备和店铺信息
@@ -198,6 +206,44 @@ namespace CarRentalSystem
         }
 
         private void btnRefreshList_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void rentCarButton_Click(object sender, EventArgs e)
+        {
+            if (StaticData.userLocal!=null)
+            {
+                SelectRentCarForm rentCarForm = new SelectRentCarForm();
+                rentCarForm.ShowDialog();
+            }
+        }
+
+        private void returnCarButton_Click(object sender, EventArgs e)
+        {
+            if (StaticData.userLocal != null)
+            {
+
+            }
+        }
+
+        private void LostCarButton_Click(object sender, EventArgs e)
+        {
+            if (StaticData.userLocal != null)
+            {
+
+            }
+        }
+
+        private void btnRelet_Click(object sender, EventArgs e)
+        {
+            if (StaticData.userLocal != null)
+            {
+
+            }
+        }
+
+        private void RefreshList()
         {
 
         }

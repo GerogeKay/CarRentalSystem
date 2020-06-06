@@ -64,7 +64,7 @@
             this.UserTypeLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.InfoListPanel = new System.Windows.Forms.Panel();
-            this.InfoListView = new System.Windows.Forms.ListView();
+            this.lvOrders = new System.Windows.Forms.ListView();
             this.colHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUserID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -79,6 +79,8 @@
             this.btnRefreshList = new System.Windows.Forms.Button();
             this.DevicePictureBox = new System.Windows.Forms.PictureBox();
             this.UserPicture = new System.Windows.Forms.PictureBox();
+            this.colEndTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
@@ -133,20 +135,23 @@
             // 租车ToolStripMenuItem
             // 
             this.租车ToolStripMenuItem.Name = "租车ToolStripMenuItem";
-            this.租车ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.租车ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.租车ToolStripMenuItem.Text = "租车";
+            this.租车ToolStripMenuItem.Click += new System.EventHandler(this.rentCarButton_Click);
             // 
             // 还车ToolStripMenuItem
             // 
             this.还车ToolStripMenuItem.Name = "还车ToolStripMenuItem";
-            this.还车ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.还车ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.还车ToolStripMenuItem.Text = "还车";
+            this.还车ToolStripMenuItem.Click += new System.EventHandler(this.returnCarButton_Click);
             // 
             // 挂失ToolStripMenuItem
             // 
             this.挂失ToolStripMenuItem.Name = "挂失ToolStripMenuItem";
-            this.挂失ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.挂失ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.挂失ToolStripMenuItem.Text = "挂失";
+            this.挂失ToolStripMenuItem.Click += new System.EventHandler(this.LostCarButton_Click);
             // 
             // 查询系统ToolStripMenuItem
             // 
@@ -162,25 +167,25 @@
             // 租还车查询ToolStripMenuItem
             // 
             this.租还车查询ToolStripMenuItem.Name = "租还车查询ToolStripMenuItem";
-            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.租还车查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.租还车查询ToolStripMenuItem.Text = "租还车查询";
             // 
             // 充值查询ToolStripMenuItem
             // 
             this.充值查询ToolStripMenuItem.Name = "充值查询ToolStripMenuItem";
-            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.充值查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.充值查询ToolStripMenuItem.Text = "充值查询";
             // 
             // 用户查询ToolStripMenuItem
             // 
             this.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem";
-            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.用户查询ToolStripMenuItem.Text = "用户查询";
             // 
             // 日志信息ToolStripMenuItem
             // 
             this.日志信息ToolStripMenuItem.Name = "日志信息ToolStripMenuItem";
-            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.日志信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.日志信息ToolStripMenuItem.Text = "日志信息";
             this.日志信息ToolStripMenuItem.Click += new System.EventHandler(this.日志信息ToolStripMenuItem_Click);
             // 
@@ -200,42 +205,42 @@
             // 车辆信息管理ToolStripMenuItem
             // 
             this.车辆信息管理ToolStripMenuItem.Name = "车辆信息管理ToolStripMenuItem";
-            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.车辆信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.车辆信息管理ToolStripMenuItem.Text = "车辆信息管理";
             this.车辆信息管理ToolStripMenuItem.Click += new System.EventHandler(this.车辆信息管理ToolStripMenuItem_Click);
             // 
             // 扣费规则管理ToolStripMenuItem
             // 
             this.扣费规则管理ToolStripMenuItem.Name = "扣费规则管理ToolStripMenuItem";
-            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.扣费规则管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.扣费规则管理ToolStripMenuItem.Text = "扣费规则管理";
             this.扣费规则管理ToolStripMenuItem.Click += new System.EventHandler(this.扣费规则管理ToolStripMenuItem_Click);
             // 
             // 用户管理ToolStripMenuItem
             // 
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
             this.用户管理ToolStripMenuItem.Click += new System.EventHandler(this.用户管理ToolStripMenuItem_Click);
             // 
             // 管理员信息ToolStripMenuItem
             // 
             this.管理员信息ToolStripMenuItem.Name = "管理员信息ToolStripMenuItem";
-            this.管理员信息ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.管理员信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.管理员信息ToolStripMenuItem.Text = "管理员信息";
             this.管理员信息ToolStripMenuItem.Click += new System.EventHandler(this.管理员信息ToolStripMenuItem_Click);
             // 
             // 店铺信息管理ToolStripMenuItem
             // 
             this.店铺信息管理ToolStripMenuItem.Name = "店铺信息管理ToolStripMenuItem";
-            this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.店铺信息管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.店铺信息管理ToolStripMenuItem.Text = "店铺信息管理";
             this.店铺信息管理ToolStripMenuItem.Click += new System.EventHandler(this.店铺信息管理ToolStripMenuItem_Click);
             // 
             // 审核列表ToolStripMenuItem
             // 
             this.审核列表ToolStripMenuItem.Name = "审核列表ToolStripMenuItem";
-            this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.审核列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.审核列表ToolStripMenuItem.Text = "审核列表";
             this.审核列表ToolStripMenuItem.Click += new System.EventHandler(this.审核列表ToolStripMenuItem_Click);
             // 
@@ -354,6 +359,7 @@
             this.LostCarButton.TabIndex = 2;
             this.LostCarButton.Text = "挂失";
             this.LostCarButton.UseVisualStyleBackColor = false;
+            this.LostCarButton.Click += new System.EventHandler(this.LostCarButton_Click);
             // 
             // returnCarButton
             // 
@@ -366,6 +372,7 @@
             this.returnCarButton.TabIndex = 1;
             this.returnCarButton.Text = "还车";
             this.returnCarButton.UseVisualStyleBackColor = false;
+            this.returnCarButton.Click += new System.EventHandler(this.returnCarButton_Click);
             // 
             // rentCarButton
             // 
@@ -378,6 +385,7 @@
             this.rentCarButton.TabIndex = 0;
             this.rentCarButton.Text = "租车";
             this.rentCarButton.UseVisualStyleBackColor = false;
+            this.rentCarButton.Click += new System.EventHandler(this.rentCarButton_Click);
             // 
             // UserInfoPanel
             // 
@@ -435,38 +443,40 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoListPanel.AutoSize = true;
-            this.InfoListPanel.Controls.Add(this.InfoListView);
+            this.InfoListPanel.Controls.Add(this.lvOrders);
             this.InfoListPanel.Location = new System.Drawing.Point(3, 278);
             this.InfoListPanel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.InfoListPanel.Name = "InfoListPanel";
             this.InfoListPanel.Size = new System.Drawing.Size(1258, 394);
             this.InfoListPanel.TabIndex = 2;
             // 
-            // InfoListView
+            // lvOrders
             // 
-            this.InfoListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.InfoListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InfoListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvOrders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvOrders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colHeader,
             this.colUserID,
             this.colUserName,
             this.colBorrowKind,
             this.colStartTime,
+            this.colEndTime,
             this.colPhone,
             this.colCarId,
             this.colShop,
-            this.colShopAddress});
-            this.InfoListView.Font = new System.Drawing.Font("宋体", 12F);
-            this.InfoListView.GridLines = true;
-            this.InfoListView.HideSelection = false;
-            this.InfoListView.Location = new System.Drawing.Point(0, 0);
-            this.InfoListView.Name = "InfoListView";
-            this.InfoListView.Size = new System.Drawing.Size(1258, 391);
-            this.InfoListView.TabIndex = 1;
-            this.InfoListView.UseCompatibleStateImageBehavior = false;
-            this.InfoListView.View = System.Windows.Forms.View.Details;
+            this.colShopAddress,
+            this.colOrderStatus});
+            this.lvOrders.Font = new System.Drawing.Font("宋体", 12F);
+            this.lvOrders.GridLines = true;
+            this.lvOrders.HideSelection = false;
+            this.lvOrders.Location = new System.Drawing.Point(0, 0);
+            this.lvOrders.Name = "lvOrders";
+            this.lvOrders.Size = new System.Drawing.Size(1258, 391);
+            this.lvOrders.TabIndex = 1;
+            this.lvOrders.UseCompatibleStateImageBehavior = false;
+            this.lvOrders.View = System.Windows.Forms.View.Details;
             // 
             // colHeader
             // 
@@ -477,7 +487,6 @@
             // 
             this.colUserID.Text = "用户ID";
             this.colUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colUserID.Width = 100;
             // 
             // colUserName
             // 
@@ -493,9 +502,9 @@
             // 
             // colStartTime
             // 
-            this.colStartTime.Text = "时间";
+            this.colStartTime.Text = "开始时间";
             this.colStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colStartTime.Width = 100;
+            this.colStartTime.Width = 120;
             // 
             // colPhone
             // 
@@ -519,7 +528,7 @@
             // 
             this.colShopAddress.Text = "店铺地址";
             this.colShopAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colShopAddress.Width = 250;
+            this.colShopAddress.Width = 230;
             // 
             // btnRelet
             // 
@@ -532,12 +541,14 @@
             this.btnRelet.TabIndex = 0;
             this.btnRelet.Text = "续租";
             this.btnRelet.UseVisualStyleBackColor = false;
+            this.btnRelet.Click += new System.EventHandler(this.btnRelet_Click);
             // 
             // 续租ToolStripMenuItem
             // 
             this.续租ToolStripMenuItem.Name = "续租ToolStripMenuItem";
-            this.续租ToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.续租ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.续租ToolStripMenuItem.Text = "续租";
+            this.续租ToolStripMenuItem.Click += new System.EventHandler(this.btnRelet_Click);
             // 
             // btnRefreshList
             // 
@@ -575,6 +586,18 @@
             this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UserPicture.TabIndex = 1;
             this.UserPicture.TabStop = false;
+            // 
+            // colEndTime
+            // 
+            this.colEndTime.Text = "结束时间";
+            this.colEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colEndTime.Width = 120;
+            // 
+            // colOrderStatus
+            // 
+            this.colOrderStatus.Text = "状态";
+            this.colOrderStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colOrderStatus.Width = 100;
             // 
             // MainForm
             // 
@@ -631,7 +654,7 @@
         private System.Windows.Forms.PictureBox UserPicture;
         private System.Windows.Forms.Label Moneylabel;
         private System.Windows.Forms.Panel InfoListPanel;
-        private System.Windows.Forms.ListView InfoListView;
+        private System.Windows.Forms.ListView lvOrders;
         private System.Windows.Forms.ColumnHeader colHeader;
         private System.Windows.Forms.ColumnHeader colUserName;
         private System.Windows.Forms.ColumnHeader colBorrowKind;
@@ -657,6 +680,8 @@
         private System.Windows.Forms.ToolStripMenuItem 续租ToolStripMenuItem;
         private System.Windows.Forms.Button btnRefreshList;
         private System.Windows.Forms.Button btnRelet;
+        private System.Windows.Forms.ColumnHeader colEndTime;
+        private System.Windows.Forms.ColumnHeader colOrderStatus;
     }
 }
 
