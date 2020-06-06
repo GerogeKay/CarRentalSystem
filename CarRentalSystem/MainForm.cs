@@ -318,7 +318,7 @@ namespace CarRentalSystem
                 }
             }
             var orders2 = rentalOrderDal.GetOrders(RentalOrder.OrderStatus.已完成);
-            foreach (var order in orders)
+            foreach (var order in orders2)
             {
                 if (order.EndTime > DateTime.Now)
                 {

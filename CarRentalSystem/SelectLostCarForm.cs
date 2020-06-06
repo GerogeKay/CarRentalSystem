@@ -44,7 +44,7 @@ namespace CarRentalSystem
                     lvCarList.Items[i].SubItems.Add("");
                     lvCarList.Items[i].SubItems.Add("");
                     //lvCarList.Items[i].SubItems.Add("");
-                    lvCarList.Items[i].SubItems[1].Text = carInfos[i].StoreId.ToString();
+                    lvCarList.Items[i].SubItems[1].Text = carInfos[i].CarId.ToString();
                     lvCarList.Items[i].SubItems[2].Text = carInfos[i].CarPlateNumber;
                     lvCarList.Items[i].SubItems[3].Text = carInfos[i].CarType;
                     lvCarList.Items[i].SubItems[4].Text = carInfos[i].Color;
