@@ -215,6 +215,7 @@ namespace CarRentalSystem
             {
                 SelectRentCarForm rentCarForm = new SelectRentCarForm();
                 rentCarForm.ShowDialog();
+                RefreshList();
             }
         }
 
@@ -223,6 +224,7 @@ namespace CarRentalSystem
             if (StaticData.userLocal != null)
             {
                 new SelectReturnCarForm().ShowDialog();
+                RefreshList();
             }
         }
 
@@ -238,7 +240,8 @@ namespace CarRentalSystem
         {
             if (StaticData.userLocal != null)
             {
-
+                new SelectReletCarForm().ShowDialog();
+                RefreshList();
             }
         }
 

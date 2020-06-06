@@ -79,10 +79,10 @@
             this.btnRefreshList = new System.Windows.Forms.Button();
             this.colEndTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colOrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
-            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.colRemainTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.DevicePictureBox = new System.Windows.Forms.PictureBox();
+            this.UserPicture = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DevicePanel.SuspendLayout();
@@ -471,6 +471,7 @@
             this.colOrderStatus,
             this.colRemainTime});
             this.lvOrders.Font = new System.Drawing.Font("宋体", 12F);
+            this.lvOrders.FullRowSelect = true;
             this.lvOrders.GridLines = true;
             this.lvOrders.HideSelection = false;
             this.lvOrders.Location = new System.Drawing.Point(0, 0);
@@ -571,6 +572,17 @@
             this.colOrderStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colOrderStatus.Width = 100;
             // 
+            // colRemainTime
+            // 
+            this.colRemainTime.Text = "剩余时间";
+            this.colRemainTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colRemainTime.Width = 150;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // DevicePictureBox
             // 
             this.DevicePictureBox.BackColor = System.Drawing.Color.GhostWhite;
@@ -594,17 +606,6 @@
             this.UserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UserPicture.TabIndex = 1;
             this.UserPicture.TabStop = false;
-            // 
-            // colRemainTime
-            // 
-            this.colRemainTime.Text = "剩余时间";
-            this.colRemainTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colRemainTime.Width = 150;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 

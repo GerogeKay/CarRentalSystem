@@ -29,7 +29,7 @@ namespace CarRentalSystem
 
         private void brtnConfirm_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

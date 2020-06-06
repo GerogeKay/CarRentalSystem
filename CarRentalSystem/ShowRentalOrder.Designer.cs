@@ -118,7 +118,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShowRentalOrder";
-            this.Text = "订单信息";
+            this.Text = "当前订单信息";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -85,6 +85,7 @@ namespace CarRentalSystem
                 CarInfo carTemp = carDal.GetCarById(carID);
                 UpdateCarForm updateCarForm = new UpdateCarForm(carTemp);
                 updateCarForm.ShowDialog();
+                RefreshList();
             }
             else
             {
