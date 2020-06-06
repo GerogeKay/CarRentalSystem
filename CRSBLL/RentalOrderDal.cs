@@ -300,5 +300,48 @@ namespace CRSBLL
             }
         }
         #endregion
+
+        #region 根据订单状态获取订单信息
+        public List<RentalOrder> GetOrders(RentalOrder.OrderStatus status)
+        {
+            string sql = "GET_ORDERS_BY_STATUS";
+            List<RentalOrder> orders = new List<RentalOrder>();
+            try
+            {
+                SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@STORE_ID", SqlDbType.Int)
+                };
+                para[0].Value = (int)status;
+                dt = new DataTable();
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
+                {
+                    dt.Load(dr);
+                }
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    RentalOrder order = new RentalOrder();
+                    order.UserID = Convert.ToInt32(dt.Rows[i]["USER_ID"]);
+                    order.CarID = Convert.ToInt32(dt.Rows[i]["CAR_ID"]);
+                    order.StoreID = Convert.ToInt32(dt.Rows[i]["STORE_ID"]);
+                    order.UserLevel = Convert.ToInt32(dt.Rows[i]["USER_LEVEL"]);
+                    order.OrderType = (RentalOrder.RentalType)Convert.ToInt32(dt.Rows[i]["ORDER_TYPE"]);
+                    order.StartTime = Convert.ToDateTime(dt.Rows[i]["START_TIME"]);
+                    order.EndTime = Convert.ToDateTime(dt.Rows[i]["END_TIME"]);
+                    order.ActualTime = Convert.ToInt32(dt.Rows[i]["ACTUAL_TIME"]);
+                    order.OrderCost = Convert.ToDecimal(dt.Rows[i]["ORDER_COST"]);
+                    order.Status = (RentalOrder.OrderStatus)Convert.ToInt32(dt.Rows[i]["ORDER_STATUS"]);
+                    order.OrderID = Convert.ToInt32(dt.Rows[i]["ID"]);
+                    orders.Add(order);
+                }
+                return orders;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
     }
 }

@@ -18,6 +18,8 @@ namespace CarRentalSystem
         OtherHelper otherHelper = new OtherHelper();
         DeviceDal deviceDal = new DeviceDal();
         StoreDal storeDal = new StoreDal();
+        RentalOrderDal rentalOrderDal = new RentalOrderDal();
+        List<RentalOrder> rentalOrders = new List<RentalOrder>();
         public MainForm()
         {
             InitializeComponent();
@@ -28,13 +30,8 @@ namespace CarRentalSystem
         {
             LoadUserInfo();
             LoadDeviceAndStore();
-            if(StaticData.userLocal != null)
-            {
-                RentalOrderDal rentalOrderDal = new RentalOrderDal();
-                rentalOrderDal.GetOrder();
-            }
-            
-
+            RefreshList();
+            timer1.Enabled = true;
         }
         #endregion
 
@@ -245,7 +242,61 @@ namespace CarRentalSystem
 
         private void RefreshList()
         {
+            if(StaticData.userLocal!= null)
+            {
+                rentalOrders = rentalOrderDal.GetOrders(StaticData.userLocal);
+            }
+            else if (StaticData.adminLocal != null)
+            {
+                rentalOrders = rentalOrderDal.GetAllOrders();
+            }
+            RefreshOrders();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            RefreshOrders();
+            CheckOrders();
+        }
+
+        private void RefreshOrders()
+        {
+            lvOrders.BeginUpdate();
+            lvOrders.Items.Clear();
+            for (int i = 0; i < rentalOrders.Count; i++)
+            {
+                lvOrders.Items.Add("");
+                StoreInfo storeTemp = storeDal.StoreSelectById(rentalOrders[i].StoreID);
+                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserId.ToString());
+                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserName);
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].OrderType.ToString());
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].StartTime.ToString());
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].EndTime.ToString());
+                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserPhone);
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].CarID.ToString());
+                lvOrders.Items[i].SubItems.Add(storeTemp.StoreName.ToString());
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].Status.ToString());
+                var remainTime = rentalOrders[i].EndTime - DateTime.Now;
+                if (remainTime.TotalSeconds <= 0)
+                {
+                    remainTime = new TimeSpan(0, 0, 0);
+                }
+                lvOrders.Items[i].SubItems.Add(remainTime.ToString(@"hh\:mm\:ss"));
+            }
+            lvOrders.EndUpdate();
+        }
+
+        private void CheckOrders()
+        {
+            var orders = rentalOrderDal.GetOrders(RentalOrder.OrderStatus.租借中);
+            foreach (var order in orders)
+            {
+                if (order.EndTime < DateTime.Now)
+                {
+                    order.Status = RentalOrder.OrderStatus.到期未还;
+                    rentalOrderDal.UpdateOrder(order);
+                }
+            }
         }
     }
 }
