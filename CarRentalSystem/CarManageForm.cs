@@ -82,7 +82,7 @@ namespace CarRentalSystem
             if (lvCarList.SelectedItems.Count>0)
             {
                 int carID = Convert.ToInt32(lvCarList.SelectedItems[0].SubItems[1].Text);
-                CarInfo carTemp = carDal.CarSelectById(carID);
+                CarInfo carTemp = carDal.GetCarById(carID);
                 UpdateCarForm updateCarForm = new UpdateCarForm(carTemp);
                 updateCarForm.ShowDialog();
             }

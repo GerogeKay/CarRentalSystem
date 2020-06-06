@@ -41,7 +41,7 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lbActtualTime = new System.Windows.Forms.Label();
+            this.lbActualTime = new System.Windows.Forms.Label();
             this.dtActualTime = new System.Windows.Forms.DateTimePicker();
             this.dtStartTime = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -172,14 +172,14 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lbActtualTime
+            // lbActualTime
             // 
-            this.lbActtualTime.AutoSize = true;
-            this.lbActtualTime.Location = new System.Drawing.Point(86, 221);
-            this.lbActtualTime.Name = "lbActtualTime";
-            this.lbActtualTime.Size = new System.Drawing.Size(59, 12);
-            this.lbActtualTime.TabIndex = 15;
-            this.lbActtualTime.Text = "到期时间:";
+            this.lbActualTime.AutoSize = true;
+            this.lbActualTime.Location = new System.Drawing.Point(86, 221);
+            this.lbActualTime.Name = "lbActualTime";
+            this.lbActualTime.Size = new System.Drawing.Size(59, 12);
+            this.lbActualTime.TabIndex = 15;
+            this.lbActualTime.Text = "到期时间:";
             // 
             // dtActualTime
             // 
@@ -217,7 +217,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(450, 329);
             this.Controls.Add(this.dtActualTime);
-            this.Controls.Add(this.lbActtualTime);
+            this.Controls.Add(this.lbActualTime);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lbTotal);
@@ -230,6 +230,8 @@
             this.Controls.Add(this.cbRentalType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RentCarForm";
             this.Text = "租车信息";
             this.Load += new System.EventHandler(this.RentCarForm_Load);
@@ -254,7 +256,7 @@
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lbActtualTime;
+        private System.Windows.Forms.Label lbActualTime;
         private System.Windows.Forms.DateTimePicker dtActualTime;
         private System.Windows.Forms.DateTimePicker dtStartTime;
         private System.Windows.Forms.Timer timer1;

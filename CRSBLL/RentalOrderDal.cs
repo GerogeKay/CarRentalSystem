@@ -310,7 +310,7 @@ namespace CRSBLL
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@STORE_ID", SqlDbType.Int)
+                    new SqlParameter("@STATUS", SqlDbType.Int)
                 };
                 para[0].Value = (int)status;
                 dt = new DataTable();
@@ -335,6 +335,50 @@ namespace CRSBLL
                     orders.Add(order);
                 }
                 return orders;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+
+        #region 根据车辆ID和状态获取订单信息
+        public RentalOrder GetOrder(int car_id, RentalOrder.OrderStatus status)
+        {
+            string sql = "GET_ORDERS_BY_CAR_ID_AND_STATUS";
+            try
+            {
+                SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@STATUS", SqlDbType.Int),
+                    new SqlParameter("@CAR_ID", SqlDbType.Int),
+                };
+                para[0].Value = (int)status;
+                para[1].Value = car_id;
+                dt = new DataTable();
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))
+                {
+                    dt.Load(dr);
+                }
+                if (dt.Rows.Count > 0)
+                {
+                    RentalOrder order = new RentalOrder();
+                    order.UserID = Convert.ToInt32(dt.Rows[0]["USER_ID"]);
+                    order.CarID = Convert.ToInt32(dt.Rows[0]["CAR_ID"]);
+                    order.StoreID = Convert.ToInt32(dt.Rows[0]["STORE_ID"]);
+                    order.UserLevel = Convert.ToInt32(dt.Rows[0]["USER_LEVEL"]);
+                    order.OrderType = (RentalOrder.RentalType)Convert.ToInt32(dt.Rows[0]["ORDER_TYPE"]);
+                    order.StartTime = Convert.ToDateTime(dt.Rows[0]["START_TIME"]);
+                    order.EndTime = Convert.ToDateTime(dt.Rows[0]["END_TIME"]);
+                    order.ActualTime = Convert.ToInt32(dt.Rows[0]["ACTUAL_TIME"]);
+                    order.OrderCost = Convert.ToDecimal(dt.Rows[0]["ORDER_COST"]);
+                    order.Status = (RentalOrder.OrderStatus)Convert.ToInt32(dt.Rows[0]["ORDER_STATUS"]);
+                    order.OrderID = Convert.ToInt32(dt.Rows[0]["ID"]);
+                    return order;
+                }
+                return null;
             }
             catch (Exception)
             {

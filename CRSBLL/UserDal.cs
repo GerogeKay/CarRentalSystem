@@ -127,7 +127,7 @@ namespace CRSBLL
                 string sql = "USER_SELECT_BY_ID";
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@NAME", ID)
+                    new SqlParameter("@ID", ID)
                 };
                 dt = new DataTable();
                 using (SqlDataReader dr = SqlHelper.ExecuteReader(SqlHelper.ConnectionStringShop, CommandType.StoredProcedure, sql, para))

@@ -19,6 +19,8 @@ namespace CarRentalSystem
         DeviceDal deviceDal = new DeviceDal();
         StoreDal storeDal = new StoreDal();
         RentalOrderDal rentalOrderDal = new RentalOrderDal();
+        CarDal carDal = new CarDal();
+        UserDal userDal = new UserDal();
         List<RentalOrder> rentalOrders = new List<RentalOrder>();
         public MainForm()
         {
@@ -220,7 +222,7 @@ namespace CarRentalSystem
         {
             if (StaticData.userLocal != null)
             {
-
+                new SelectReturnCarForm().ShowDialog();
             }
         }
 
@@ -266,13 +268,14 @@ namespace CarRentalSystem
             for (int i = 0; i < rentalOrders.Count; i++)
             {
                 lvOrders.Items.Add("");
+                UserInfo user = userDal.SelectUserByID(rentalOrders[i].UserID);
                 StoreInfo storeTemp = storeDal.StoreSelectById(rentalOrders[i].StoreID);
-                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserId.ToString());
-                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserName);
+                lvOrders.Items[i].SubItems.Add(rentalOrders[i].UserID.ToString());
+                lvOrders.Items[i].SubItems.Add(user.UserName);
                 lvOrders.Items[i].SubItems.Add(rentalOrders[i].OrderType.ToString());
                 lvOrders.Items[i].SubItems.Add(rentalOrders[i].StartTime.ToString());
                 lvOrders.Items[i].SubItems.Add(rentalOrders[i].EndTime.ToString());
-                lvOrders.Items[i].SubItems.Add(StaticData.userLocal.UserPhone);
+                lvOrders.Items[i].SubItems.Add(user.UserPhone);
                 lvOrders.Items[i].SubItems.Add(rentalOrders[i].CarID.ToString());
                 lvOrders.Items[i].SubItems.Add(storeTemp.StoreName.ToString());
                 lvOrders.Items[i].SubItems.Add(rentalOrders[i].Status.ToString());
@@ -294,7 +297,11 @@ namespace CarRentalSystem
                 if (order.EndTime < DateTime.Now)
                 {
                     order.Status = RentalOrder.OrderStatus.到期未还;
+                    var car = carDal.GetCarById(order.CarID);
+                    car.Status = CarInfo.CarStatus.到期未还;
+                    carDal.CarUpdate(car);
                     rentalOrderDal.UpdateOrder(order);
+                    RefreshList();
                 }
             }
         }

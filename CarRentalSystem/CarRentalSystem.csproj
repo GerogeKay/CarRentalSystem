@@ -97,6 +97,18 @@
     <Compile Include="RentCarForm.Designer.cs">
       <DependentUpon>RentCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnCarForm.Designer.cs">
+      <DependentUpon>ReturnCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectReturnCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectReturnCarForm.Designer.cs">
+      <DependentUpon>SelectReturnCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectRentCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RentCarForm.resx">
       <DependentUpon>RentCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnCarForm.resx">
+      <DependentUpon>ReturnCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectReturnCarForm.resx">
+      <DependentUpon>SelectReturnCarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectRentCarForm.resx">
       <DependentUpon>SelectRentCarForm.cs</DependentUpon>

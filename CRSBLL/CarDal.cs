@@ -79,7 +79,7 @@ namespace CRSBLL
         #endregion
 
         #region 根据ID查询车辆信息
-        public CarInfo CarSelectById(int carId)
+        public CarInfo GetCarById(int carId)
         {
             string sql = "SELECT_CAR_BY_ID";
             try
@@ -111,7 +111,7 @@ namespace CRSBLL
         }
         #endregion
 
-        #region 获取全部店铺的信息
+        #region 获取全部车辆的信息
         public List<CarInfo> GetCarList()
         {
             string sql = "SELECT * FROM CAR_INFO WHERE ISDELETE=0";

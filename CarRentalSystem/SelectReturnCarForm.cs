@@ -12,15 +12,16 @@ using System.Windows.Forms;
 
 namespace CarRentalSystem
 {
-    public partial class SelectRentCarForm : Form
+    public partial class SelectReturnCarForm : Form
     {
         CarDal carDal = new CarDal();
         List<CarInfo> carInfos;
         private StoreDal storeDal = new StoreDal();
 
-        public SelectRentCarForm()
+        public SelectReturnCarForm()
         {
             InitializeComponent();
+            RefreshList();
         }
 
         private void buttonRefreshList_Click(object sender, EventArgs e)
@@ -28,24 +29,9 @@ namespace CarRentalSystem
             RefreshList();
         }
 
-        private void btnSelectCar_Click(object sender, EventArgs e)
-        {
-            if (lvCarList.SelectedItems.Count > 0)
-            {
-                int carID = Convert.ToInt32(lvCarList.SelectedItems[0].SubItems[1].Text);
-                CarInfo carTemp = carDal.GetCarById(carID);
-                RentCarForm rentCarForm = new RentCarForm(carTemp);
-                rentCarForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("请先选择要租赁的车辆");
-            }
-        }
-
         private void RefreshList()
         {
-            carInfos = carDal.GetCarEnable(StaticData.storeLocal.StoreId);
+            carInfos = carDal.GetCarByUserId(StaticData.userLocal.UserId);
             if (carInfos != null)
             {
                 Cursor = Cursors.WaitCursor;
@@ -59,23 +45,32 @@ namespace CarRentalSystem
                     lvCarList.Items[i].SubItems.Add("");
                     lvCarList.Items[i].SubItems.Add("");
                     lvCarList.Items[i].SubItems.Add("");
-                    lvCarList.Items[i].SubItems.Add("");
+                    //lvCarList.Items[i].SubItems.Add("");
                     lvCarList.Items[i].SubItems[1].Text = carInfos[i].StoreId.ToString();
                     lvCarList.Items[i].SubItems[2].Text = carInfos[i].CarPlateNumber;
                     lvCarList.Items[i].SubItems[3].Text = carInfos[i].CarType;
                     lvCarList.Items[i].SubItems[4].Text = carInfos[i].Color;
                     StoreInfo storeTemp = storeDal.StoreSelectById(carInfos[i].StoreId);
                     lvCarList.Items[i].SubItems[5].Text = storeTemp.StoreName;
-
+                    lvCarList.Items[i].SubItems.Add(carInfos[i].Status.ToString());
                 }
                 lvCarList.EndUpdate();
                 Cursor = Cursors.Default;
             }
         }
 
-        private void RentCarForm_Activated(object sender, EventArgs e)
+        private void btnSelectCar_Click(object sender, EventArgs e)
         {
-            RefreshList();
+            if (lvCarList.SelectedItems.Count > 0)
+            {
+                int carID = Convert.ToInt32(lvCarList.SelectedItems[0].SubItems[1].Text);
+                CarInfo carTemp = carDal.GetCarById(carID);
+                new ReturnCarForm(carTemp).ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("请先选择要归还的车辆");
+            }
         }
     }
 }
