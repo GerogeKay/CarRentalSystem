@@ -14,7 +14,7 @@ namespace CRSCOMMON
     {
 
         //Database connection strings
-        public static readonly string ConnectionStringShop = "user id=sa;password=123456;Database=CarRentalSystem;Server=localhost;min pool size=4;max pool size=4;";
+        public static readonly string ConnectionStringShop = "user id=kay;password=123456;Database=CarRentalSystem;Server=localhost;min pool size=4;max pool size=4;";
         // Hashtable to store cached parameters
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
